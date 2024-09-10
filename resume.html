@@ -40,26 +40,79 @@
     </nav>
 
     <div class="container mx-auto px-12 py-8 mt-12">
+        <section id="resume-intro" class="mb-8 text-center">
+            <p class="text-gray-300 text-lg">
+                Here you'll find an overview of my 
+                <a href="#experience" class="text-blue-400 hover:underline">professional experience</a>, 
+                <a href="#projects" class="text-blue-400 hover:underline">key projects</a>, 
+                <a href="#education" class="text-blue-400 hover:underline">educational background</a>, 
+                <a href="#publications" class="text-blue-400 hover:underline">publications</a> and 
+                <a href="#volunteer" class="text-blue-400 hover:underline">volunteer work</a>.
+            </p>
+        </section>
+
         <main>
             <section id="experience" class="mb-8">
                 <h2 class="text-2xl font-normal mb-4 text-white">Professional Experience</h2>
+                
                 <h3 class="text-xl font-medium text-white">Motional - Software Engineer</h3>
                 <p class="text-gray-400">May 2022 - August 2024 | Boston, MA</p>
                 <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Architected scalable AWS cloud services infrastructure for autonomous vehicle incident triage</li>
-                    <li>Developed ML models for identifying failures in autonomous vehicles</li>
-                    <li>Built centralized SQL database for model training and evaluation</li>
-                    <!-- Add more experience details as needed -->
+                    <li>Architected a scalable AWS cloud services infrastructure enabling triage of ~10,000 autonomous vehicle incidents daily</li>
+                    <li>Developed and deployed ML models to identify failures in autonomous vehicles, applying automated feature engineering techniques for thorough time series analysis, achieving weekly savings of 80+ hours of engineer time</li>
+                    <li>Built a centralized SQL database for model training and evaluation by sourcing data through internal REST and GraphQL APIs</li>
+                    <li>Automated model improvement through periodic polling, re-training and monitoring, ensuring long-term reliability</li>
+                    <li>Implemented a system to extract time series information from different robotic subsystems (eg. object detections) to label incidents with the contexts of the driving taxonomy and commonly-observed failure modes</li>
+                    <li>Contributed to the development of software standards and CI/CD pipelines, enhancing team efficiency and product quality</li>
+                </ul>
+
+                <h3 class="text-xl font-medium text-white mt-4">Motional - Robotics Research Intern, Human-Robot Interaction (HRI)</h3>
+                <p class="text-gray-400">August 2021 - May 2022 | Boston, MA</p>
+                <ul class="list-disc pl-5 mt-2 text-gray-300">
+                    <li>Performed literature reviews and conducted research studies on different AV-Vulnerable Road User (VRU) interactions</li>
+                    <li>Co-authored 5 HRI conference papers for autonomous vehicles at IEEE RO-MAN, AAAI, IEEE/ACM HRI 2023</li>
+                </ul>
+
+                <h3 class="text-xl font-medium text-white mt-4">Human-Robot Interaction Lab, Tufts University - Robotics Research Assistant</h3>
+                <p class="text-gray-400">May 2021 - August 2021 | Medford, MA</p>
+                <ul class="list-disc pl-5 mt-2 text-gray-300">
+                    <li>Developed C++ code to alter the representation of human agents in ROS costmaps to demotivate violation of personal space boundaries while path planning; Experimented with different cost function formulations based on the planning algorithm used</li>
+                    <li>Wrote a module leveraging the ROS server-client model to motivate or demotivate navigation through marked polygon-zones</li>
                 </ul>
             </section>
 
             <section id="projects" class="mb-8">
                 <h2 class="text-2xl font-normal mb-4 text-white">Projects</h2>
                 <ul class="list-disc pl-5 text-gray-300">
-                    <li><a href="#" class="text-blue-400 hover:underline">Video Frame Detection System</a></li>
-                    <li><a href="#" class="text-blue-400 hover:underline">Real-Time Object Detection and Communication</a></li>
-                    <li><a href="#" class="text-blue-400 hover:underline">AlphaZeroNano</a></li>
-                    <li><a href="#" class="text-blue-400 hover:underline">NanoGPT</a></li>
+                    <li>
+                        <strong class="text-white">Video Frame Detection System</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Designed and implemented a scalable, cloud-based deep learning system using Flask, AWS services, Docker and Kubernetes</li>
+                            <li>Automated the pipeline for video upload, frame extraction and storage in S3, with serverless event triggers and message queues</li>
+                            <li>Deployed the YOLOv9 object detection model on an EKS cluster, processing frames and storing results in DocumentDB</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">Real-Time Object Detection and Communication</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Built a system for real-time object detection using WebRTC, enabling asynchronous communication between client and server</li>
+                            <li>Implemented a containerized server for video recording and streaming and, a client to run real-time object detection</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">AlphaZeroNano</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Developed a custom version of DeepMind's AlphaZero using deep reinforcement learning and Monte Carlo Tree Search</li>
+                            <li>Implemented and trained an AlphaZero agent in PyTorch with a CNN based model for state evaluation</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">NanoGPT</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Developed custom Transformer blocks from scratch in PyTorch and used them for character-level language modeling</li>
+                            <li>Trained and tested GPT-inspired decoder-only model on all seven Harry Potter novels for next-token prediction</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
 

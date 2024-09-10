@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryaman Pandya - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-900 opacity-70 text-white max-w-fit mx-auto rounded-lg mt-4 px-12">
+        <div class="flex justify-center">
+            <a href="home.html" class="btn btn-ghost text-lg normal-case font-normal">About</a>
+            <a href="resume.html" class="btn btn-ghost text-lg normal-case font-normal">Resume</a>
+            <a href="thoughts.html" class="btn btn-ghost text-lg normal-case font-normal">Thoughts</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-12 py-8 mt-12">
+        <main>
+            <section id="experience" class="mb-8">
+                <h2 class="text-2xl font-normal mb-4 text-white">Professional Experience</h2>
+                <h3 class="text-xl font-medium text-white">Motional - Software Engineer</h3>
+                <p class="text-gray-400">May 2022 - August 2024 | Boston, MA</p>
+                <ul class="list-disc pl-5 mt-2 text-gray-300">
+                    <li>Architected scalable AWS cloud services infrastructure for autonomous vehicle incident triage</li>
+                    <li>Developed ML models for identifying failures in autonomous vehicles</li>
+                    <li>Built centralized SQL database for model training and evaluation</li>
+                    <!-- Add more experience details as needed -->
+                </ul>
+            </section>
+
+            <section id="projects" class="mb-8">
+                <h2 class="text-2xl font-normal mb-4 text-white">Projects</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li><a href="#" class="text-blue-400 hover:underline">Video Frame Detection System</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">Real-Time Object Detection and Communication</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">AlphaZeroNano</a></li>
+                    <li><a href="#" class="text-blue-400 hover:underline">NanoGPT</a></li>
+                </ul>
+            </section>
+
+            <section id="education" class="mb-8">
+                <h2 class="text-2xl font-normal mb-4 text-white">Education</h2>
+                <p class="font-semibold text-white">Bachelor of Science in Computer Engineering</p>
+                <p class="text-gray-400">Tufts University School of Engineering, Medford, MA | May 2022</p>
+            </section>
+
+            <section id="publications" class="mb-8">
+                <h2 class="text-2xl font-normal mb-4 text-white">Publications</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li>"Advancing the State of AV-Human Road User Interaction: Challenges and Opportunities" - AAAI 2023, Stanford, California [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"Design Factors for Supporting Pedestrian-AV Interaction at Crosswalks" - HRI 2023, Stockholm, Sweden [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"Insights on Autonomous Vehicle Interaction Protocols with First Responders" - HRI 2023 [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"Communicating Lane Change Intent in Autonomous Vehicles" - HRI 2023 [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"The Road Ahead: Advancing Interactions between Autonomous Vehicles, Pedestrians, and Other Road Users" - IEEE RO-MAN 2023, Busan, South Korea [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"nuReality: A VR environment for research of pedestrian and autonomous vehicle interactions" - arXiv preprint [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                </ul>
+            </section>
+
+            <section id="contact" class="mb-8">
+                <h2 class="text-2xl font-normal mb-4 text-white">Contact</h2>
+                <p class="text-gray-300">Email: <a href="mailto:aryamanpandya@gmail.com" class="text-blue-400 hover:underline">aryamanpandya@gmail.com</a></p>
+                <p class="text-gray-300">Phone: (857) 289-1038</p>
+                <p class="text-gray-300">LinkedIn: <a href="https://www.linkedin.com/in/aryaman-pandya" class="text-blue-400 hover:underline">www.linkedin.com/in/aryaman-pandya</a></p>
+                <p class="text-gray-300">GitHub: <a href="https://www.github.com/aryamanpandya99" class="text-blue-400 hover:underline">www.github.com/aryamanpandya99</a></p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+        <p class="text-center text-gray-400">&copy; 2024 Aryaman Pandya. All rights reserved.</p>
+    </footer>
+</body>
+</html>

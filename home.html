@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryaman Pandya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-900 opacity-70 text-white max-w-fit mx-auto rounded-lg mt-4 px-12">
+        <div class="flex justify-center">
+            <a href="home.html" class="btn btn-ghost text-lg normal-case font-normal">About</a>
+            <a href="resume.html" class="btn btn-ghost text-lg normal-case font-normal">Resume</a>
+            <a href="thoughts.html" class="btn btn-ghost text-lg normal-case font-normal">Thoughts</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-12 py-8 mt-6">
+        <main>
+            <section id="about" class="mb-24">
+                <h2 class="text-2xl font-normal mb-4 text-white">About Me</h2>
+                <div class="flex flex-col md:flex-row items-start mb-6">
+                    <div class="md:w-2/3 md:pr-8">
+                        <p class="text-gray-300 mb-4">
+                            I'm Aryaman Pandya, a Software Engineer with a passion for Human-Centered Design and experience in building robust machine learning applications. 
+                            I previously worked on large scale machine learning systems at Motional. My models were responsible for the detection and classification of complex Autonomous Vehicle failures. 
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            I grew up in Mumbai, India where I obtained my IB Diploma at the Oberoi International School. I then moved to Medford, Massachusetts where I earned 
+                            my Bachelor's of Science in Computer Engineering at Tufts University.
+                        </p>
+                        <p class="text-gray-300 mb-4">
+                            As an engineer, I'm excited by the prospect of taking cutting edge intelligent systems, and crafting them into technically sound products that enhance the human 
+                            experience. Over the past few years, I've had the opportunity to contribute to a number of research projects in the field of Human-Robot Interaction. 
+                            This includes work with the Human-Robot Interaction Lab at Tufts University, and cross-collaborative research with leading researchers in the field of 
+                            HRI for Autonomous Vehicles.
+                        </p>
+                        <p class="text-gray-300">
+                            As a teenager (and younger) I competed on the national squash circuit in India, a sport I pursued at the varsity level in college as well. 
+                            I also am a lifelong martial artist, practicing karate, muay thai, and jiu jitsu.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 mt-6 md:mt-0">
+                        <img src="Aryaman.png" alt="Aryaman Pandya" class=" object-cover rounded-lg">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+        <p class="text-center text-gray-400">&copy; 2024 Aryaman Pandya. All rights reserved.</p>
+    </footer>
+</body>
+</html>

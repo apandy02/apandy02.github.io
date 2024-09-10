@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryaman Pandya - Thoughts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-900 opacity-70 text-white max-w-fit mx-auto rounded-xl mt-4 px-12">
+        <div class="flex justify-center">
+            <a href="home.html" class="btn btn-ghost text-lg normal-case font-light py-1">About</a>
+            <a href="resume.html" class="btn btn-ghost text-lg normal-case font-light py-1">Resume</a>
+            <a href="thoughts.html" class="btn btn-ghost text-lg normal-case font-light py-1">Thoughts</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-12 py-8 mt-6 mb-8">
+        <p class="text-lg font-light text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+            An unstructured log of miscellaneous thoughts.
+        </p>
+
+        <div class="mb-12 bg-slate-900 rounded-xl p-6 max-w-lg mx-auto">
+            <ul class="space-y-2 text-center">
+                <li><a href="#thought1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Quotes</a></li>
+            </ul>
+        </div>
+
+        <div id="thought1" class="mb-12">
+            <h3 class="text-2xl font-normal mb-4 text-white">Quotes</h3>
+            <p class="text-gray-300">
+               The following is a running list of quotes I found powerful when I came across them in books, podcasts, or other sources.
+            </p>
+            <ul class="list-disc pl-5 mt-4 space-y-4 text-gray-300">
+                <li>
+                    <p>"You can't know everything, but you should convince yourself you can know anything."</p>
+                    <p class="text-sm text-gray-400 mt-1">- John Carmack</p>
+                </li>
+                <li>
+                    <p>"We see an exponential curve but it's not because one thing is exponential, it's because we have hundreds of little sigmoids overlapped on each other that makes the general pattern look exponential"</p>
+                    <p class="text-sm text-gray-400 mt-1">- John Carmack</p>
+                </li>
+                <li>
+                    <p>"Up to a point it is better to let the snags [bugs] be there than to spend such time in design that there are none (how many decades would this course take?)."</p>
+                    <p class="text-sm text-gray-400 mt-1">- Alan Turing</p>
+                </li>
+                <li>
+                    <p>"I wish I was weirder"</p>
+                    <p class="text-sm text-gray-400 mt-1">- George Hotz</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+        <p class="text-center text-gray-400">&copy; 2024 Aryaman Pandya. All rights reserved.</p>
+    </footer>
+</body>
+</html>

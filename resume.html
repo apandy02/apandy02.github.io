@@ -12,6 +12,39 @@
             background-color: #000000;
             color: #ffffff;
         }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: rgba(59, 130, 246, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover {
+            opacity: 1;
+        }
+        .section-header {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .job-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+        .job-details {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -52,52 +85,65 @@
         </section>
 
         <main>
-            <section id="experience" class="mb-8">
-                <h2 class="text-2xl font-normal mb-4 text-white">Professional Experience</h2>
+            <section id="experience" class="mb-12">
+                <h2 class="section-header">Professional Experience</h2>
                 
-                <h3 class="text-xl font-medium text-white">Motional - Software Engineer</h3>
-                <p class="text-gray-400">May 2022 - August 2024 | Boston, MA</p>
-                <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Architected a scalable AWS cloud services infrastructure enabling triage of ~10,000 autonomous vehicle incidents daily</li>
-                    <li>Developed and deployed ML models to identify failures in autonomous vehicles, applying automated feature engineering techniques for thorough time series analysis, achieving weekly savings of 80+ hours of engineer time</li>
-                    <li>Built a centralized SQL database for model training and evaluation by sourcing data through internal REST and GraphQL APIs</li>
-                    <li>Automated model improvement through periodic polling, re-training and monitoring, ensuring long-term reliability</li>
-                    <li>Implemented a system to extract time series information from different robotic subsystems (eg. object detections) to label incidents with the contexts of the driving taxonomy and commonly-observed failure modes</li>
-                    <li>Contributed to the development of software standards and CI/CD pipelines, enhancing team efficiency and product quality</li>
-                </ul>
+                <div class="mb-6">
+                    <h3 class="job-title">Motional - Software Engineer</h3>
+                    <p class="job-details">May 2022 - August 2024 | Boston, MA</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Architected a scalable AWS cloud services infrastructure enabling triage of ~10,000 autonomous vehicle incidents daily</li>
+                        <li>Developed and deployed ML models to identify failures in autonomous vehicles, applying automated feature engineering techniques for thorough time series analysis, achieving weekly savings of 80+ hours of engineer time</li>
+                        <li>Built a centralized SQL database for model training and evaluation by sourcing data through internal REST and GraphQL APIs</li>
+                        <li>Automated model improvement through periodic polling, re-training and monitoring, ensuring long-term reliability</li>
+                        <li>Implemented a system to extract time series information from different robotic subsystems (eg. object detections) to label incidents with the contexts of the driving taxonomy and commonly-observed failure modes</li>
+                        <li>Contributed to the development of software standards and CI/CD pipelines, enhancing team efficiency and product quality</li>
+                    </ul>
+                </div>
 
-                <h3 class="text-xl font-medium text-white mt-4">Motional - Robotics Research Intern, Human-Robot Interaction (HRI)</h3>
-                <p class="text-gray-400">August 2021 - May 2022 | Boston, MA</p>
-                <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Performed literature reviews and conducted research studies on different AV-Vulnerable Road User (VRU) interactions</li>
-                    <li>Co-authored 5 HRI conference papers for autonomous vehicles at IEEE RO-MAN, AAAI, IEEE/ACM HRI 2023</li>
-                </ul>
+                <div class="mb-6">
+                    <h3 class="job-title">Motional - Robotics Research Intern, Human-Robot Interaction (HRI)</h3>
+                    <p class="job-details">August 2021 - May 2022 | Boston, MA</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Performed literature reviews and conducted research studies on different AV-Vulnerable Road User (VRU) interactions</li>
+                        <li>Co-authored 5 HRI conference papers for autonomous vehicles at IEEE RO-MAN, AAAI, IEEE/ACM HRI 2023</li>
+                    </ul>
+                </div>
 
-                <h3 class="text-xl font-medium text-white mt-4">Human-Robot Interaction Lab, Tufts University - Robotics Research Assistant</h3>
-                <p class="text-gray-400">May 2021 - August 2021 | Medford, MA</p>
-                <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Developed C++ code to alter the representation of human agents in ROS costmaps to demotivate violation of personal space boundaries while path planning; Experimented with different cost function formulations based on the planning algorithm used</li>
-                    <li>Wrote a module leveraging the ROS server-client model to motivate or demotivate navigation through marked polygon-zones</li>
-                </ul>
+                <div class="mb-6">
+                    <h3 class="job-title">Human-Robot Interaction Lab, Tufts University - Robotics Research Assistant</h3>
+                    <p class="job-details">May 2021 - August 2021 | Medford, MA</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Developed C++ code to alter the representation of human agents in ROS costmaps to demotivate violation of personal space boundaries while path planning; Experimented with different cost function formulations based on the planning algorithm used</li>
+                        <li>Wrote a module leveraging the ROS server-client model to motivate or demotivate navigation through marked polygon-zones</li>
+                    </ul>
+                </div>
 
-                <h3 class="text-xl font-medium text-white mt-4">ReShape Co. - Software Consultant</h3>
-                <p class="text-gray-400">June 2020 - September 2020 | London, England, United Kingdom</p>
-                <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Worked with small-medium businesses adversely impacted by the COVID-19 pandemic to develop software products essential to their growth</li>
-                </ul>
+                <div class="mb-6">
+                    <h3 class="job-title">ReShape Co. - Software Consultant</h3>
+                    <p class="job-details">June 2020 - September 2020 | London, England, United Kingdom</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Worked with small-medium businesses adversely impacted by the COVID-19 pandemic to develop software products essential to their growth</li>
+                    </ul>
+                </div>
 
-                <h3 class="text-xl font-medium text-white mt-4">ACG World - Software Engineer Intern</h3>
-                <p class="text-gray-400">June 2019 - July 2019 | Mumbai Area, India</p>
-                <ul class="list-disc pl-5 mt-2 text-gray-300">
-                    <li>Wrote software to interpret data from 4D inspection cameras used within manufacturing systems at one of the world's largest capsule production plants</li>
-                </ul>
+                <div class="mb-6">
+                    <h3 class="job-title">ACG World - Software Engineer Intern</h3>
+                    <p class="job-details">June 2019 - July 2019 | Mumbai Area, India</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-300">
+                        <li>Wrote software to interpret data from 4D inspection cameras used within manufacturing systems at one of the world's largest capsule production plants</li>
+                    </ul>
+                </div>
             </section>
 
-            <section id="projects" class="mb-8">
-                <h2 class="text-2xl font-normal mb-4 text-white">Projects</h2>
+            <section id="projects" class="mb-12">
+                <h2 class="section-header">Projects</h2>
+                <p class="text-gray-400 mb-4">
+                    The following is a non-exhaustive list of side projects I've worked on recently. 
+                </p>
                 <ul class="list-disc pl-5 text-gray-300">
                     <li>
-                        <strong class="text-white">Video Frame Detection System</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <strong class="text-white">Video Frame Detection System</strong> [<a href="#" class="text-gray-200 hover:text-white hover:underline">github link</a>]
                         <ul class="list-disc pl-5 mt-2">
                             <li>Designed and implemented a scalable, cloud-based deep learning system using Flask, AWS services, Docker and Kubernetes</li>
                             <li>Automated the pipeline for video upload, frame extraction and storage in S3, with serverless event triggers and message queues</li>
@@ -105,21 +151,21 @@
                         </ul>
                     </li>
                     <li class="mt-4">
-                        <strong class="text-white">Real-Time Object Detection and Communication</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <strong class="text-white">Real-Time Object Detection and Communication</strong> [<a href="#" class="text-gray-200 hover:text-white hover:underline">github link</a>]
                         <ul class="list-disc pl-5 mt-2">
                             <li>Built a system for real-time object detection using WebRTC, enabling asynchronous communication between client and server</li>
                             <li>Implemented a containerized server for video recording and streaming and, a client to run real-time object detection</li>
                         </ul>
                     </li>
                     <li class="mt-4">
-                        <strong class="text-white">AlphaZeroNano</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <strong class="text-white">AlphaZeroNano</strong> [<a href="#" class="text-gray-200 hover:text-white hover:underline">github link</a>]
                         <ul class="list-disc pl-5 mt-2">
                             <li>Developed a custom version of DeepMind's AlphaZero using deep reinforcement learning and Monte Carlo Tree Search</li>
                             <li>Implemented and trained an AlphaZero agent in PyTorch with a CNN based model for state evaluation</li>
                         </ul>
                     </li>
                     <li class="mt-4">
-                        <strong class="text-white">NanoGPT</strong> [<a href="#" class="text-blue-400 hover:underline">github link</a>]
+                        <strong class="text-white">NanoGPT</strong> [<a href="#" class="text-gray-200 hover:text-white hover:underline">github link</a>]
                         <ul class="list-disc pl-5 mt-2">
                             <li>Developed custom Transformer blocks from scratch in PyTorch and used them for character-level language modeling</li>
                             <li>Trained and tested GPT-inspired decoder-only model on all seven Harry Potter novels for next-token prediction</li>
@@ -128,28 +174,110 @@
                 </ul>
             </section>
 
-            <section id="education" class="mb-8">
-                <h2 class="text-2xl font-normal mb-4 text-white">Education</h2>
+            <section id="education" class="mb-12">
+                <h2 class="section-header">Education</h2>
                 <p class="font-semibold text-white">Bachelor of Science in Computer Engineering</p>
                 <p class="text-gray-400">Tufts University School of Engineering, Medford, MA | May 2022</p>
             </section>
 
-            <section id="publications" class="mb-8">
-                <h2 class="text-2xl font-normal mb-4 text-white">Publications</h2>
+            <section id="publications" class="mb-12">
+                <h2 class="section-header">Publications</h2>
                 <ul class="list-disc pl-5 text-gray-300">
-                    <li>"Advancing the State of AV-Human Road User Interaction: Challenges and Opportunities" - AAAI 2023, Stanford, California [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
-                    <li>"Design Factors for Supporting Pedestrian-AV Interaction at Crosswalks" - HRI 2023, Stockholm, Sweden [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
-                    <li>"Insights on Autonomous Vehicle Interaction Protocols with First Responders" - HRI 2023 [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
-                    <li>"Communicating Lane Change Intent in Autonomous Vehicles" - HRI 2023 [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
-                    <li>"The Road Ahead: Advancing Interactions between Autonomous Vehicles, Pedestrians, and Other Road Users" - IEEE RO-MAN 2023, Busan, South Korea [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
-                    <li>"nuReality: A VR environment for research of pedestrian and autonomous vehicle interactions" - arXiv preprint [<a href="#" class="text-blue-400 hover:underline">paper</a>]</li>
+                    <li>"Advancing the State of AV-Human Road User Interaction: Challenges and Opportunities" - AAAI 2023, Stanford, California [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                    <li>"Design Factors for Supporting Pedestrian-AV Interaction at Crosswalks" - HRI 2023, Stockholm, Sweden [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                    <li>"Insights on Autonomous Vehicle Interaction Protocols with First Responders" - HRI 2023 [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                    <li>"Communicating Lane Change Intent in Autonomous Vehicles" - HRI 2023 [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                    <li>"The Road Ahead: Advancing Interactions between Autonomous Vehicles, Pedestrians, and Other Road Users" - IEEE RO-MAN 2023, Busan, South Korea [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                    <li>"nuReality: A VR environment for research of pedestrian and autonomous vehicle interactions" - arXiv preprint [<a href="#" class="text-gray-200 hover:text-white hover:underline">paper</a>]</li>
+                </ul>
+            </section>
+
+            <section id="volunteer" class="mb-12">
+                <h2 class="section-header">Volunteering</h2>
+                <ul class="list-disc pl-5 text-gray-300">
+                    <li>
+                        <strong class="text-white">Peer Reviewer</strong>
+                        <p class="text-gray-400">ACM SIGCHI Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI) 2024</p>
+                        <p class="text-gray-400">Stanford University, California, US, USA</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Invited to review submissions for the premier forum on automotive UI research</li>
+                            <li>Provide expertise in autonomous vehicle interaction design for paper selection</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">Member</strong>
+                        <p class="text-gray-400">MassRobotics Socially Aware Autonomous Mobility Consortium</p>
+                        <p class="text-gray-400">Boston, Massachusetts, USA</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Participate in discussions with industry, academia, and government leaders</li>
+                            <li>Contribute to shaping standards and methods for AV human-robot interaction</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">Technical Judge</strong>
+                        <p class="text-gray-400">FIRST Robotics Competitions</p>
+                        <p class="text-gray-400">Massachusetts, USA</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Evaluate youth robotics projects in competitions</li>
+                            <li>Support STEM education and inspire future generations of engineers</li>
+                        </ul>
+                    </li>
+                    <li class="mt-4">
+                        <strong class="text-white">Tutor</strong>
+                        <p class="text-gray-400">Angel Xpress Foundation</p>
+                        <p class="text-gray-400">Mumbai, India</p>
+                        <ul class="list-disc pl-5 mt-2">
+                            <li>Worked as a volunteer teacher for middle school students with limited access to education in suburban Mumbai</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
         </main>
     </div>
 
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+
     <footer class="bg-gray-900 py-4">
         <p class="text-center text-gray-400">&copy; 2024 Aryaman Pandya. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hover effect for project and publication links
+        const links = document.querySelectorAll('#projects a, #publications a');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.textDecoration = 'underline';
+                link.style.color = '#ffffff'; // White on hover
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.textDecoration = 'none';
+                link.style.color = '#e5e7eb'; // Back to original light gray color
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
 </body>
 </html>

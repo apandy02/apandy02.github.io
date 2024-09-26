@@ -57,6 +57,16 @@
             color: #9ca3af;
             font-style: italic;
         }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .navbar {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -84,7 +94,7 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-24 py-8 mt-6 mb-8">
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 py-8 mt-6 mb-8">
         <section id="resume-intro" class="mb-8 text-center">
             <p class="text-gray-300 text-lg">
                 Here you'll find an overview of my 
@@ -116,7 +126,7 @@
                     <h3 class="job-title">Motional - Robotics Research Intern, Human-Robot Interaction (HRI)</h3>
                     <p class="job-details">August 2021 - May 2022 | Boston, MA</p>
                 <p class="job-description">
-                    As a Robotics Research Intern on the Human-Robot Interaction team at Motional, I studied methods to socially optimize the behavior of Autonomous Vehicles. In general, the formulation of the objective function of AV research is to find optimal methods to safely and efficiently traverse through roads designed for humans to drive on. A lot of this conventional research misses out on some of the implicit behaviors humans exhibit while interacting with other human road users. My research objective was to decode some of these implicit behaviors, and to find ways to integrate them within Motional’s existing autonomy stack.
+                    As a Robotics Research Intern on the Human-Robot Interaction team at Motional, I studied methods to socially optimize the behavior of Autonomous Vehicles. In general, the formulation of the objective function of AV research is to find optimal methods to safely and efficiently traverse through roads designed for humans to drive on. A lot of this conventional research misses out on some of the implicit behaviors humans exhibit while interacting with other human road users. My research objective was to decode some of these implicit behaviors, and to find ways to integrate them within Motional's existing autonomy stack.
                 </p>
                 <p class="job-description">
                     For example, we studied the interactions of AVs and pedestrians as they cross the street, behavior when interacting with first responders, and the intuitiveness of lane change intent signaling. As part of this internship, I co-authored numerous papers. These are listed in the <a href="#publications" class="text-blue-400 hover:underline">publications</a> section below.

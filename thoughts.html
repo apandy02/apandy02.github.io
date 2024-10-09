@@ -45,7 +45,7 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 py-8 mt-6 mb-8">
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
         <p class="text-lg font-light text-center text-gray-300 mb-12 max-w-2xl mx-auto">
             An unstructured log of miscellaneous thoughts.
         </p>
@@ -53,7 +53,6 @@
         <div class="mb-12 bg-slate-800 rounded-xl p-6 max-w-lg mx-auto">
             <ul class="space-y-2 text-center">
                 <li><a href="#thought1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Quotes</a></li>
-                <li><a href="#thought2" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">O1</a></li>
                 <li><a href="#bookshelf" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Bookshelf</a></li>
                 <li><a href="#thought2" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">O1</a></li>
             </ul>
@@ -90,32 +89,6 @@
                     <p class="text-sm text-gray-400 mt-1">- George Hotz</p>
                 </li>
             </ul>
-        </div>
-    
-        <div id="thought2" class="mb-12">
-            <h3 class="text-2xl font-normal mb-4 text-white">O1: Modeling Natural Language Chain of Thought as a Reinforcement Learning Problem</h3>
-            <p class="text-gray-300 mb-4">
-                Last week, OpenAI released their newest model, O1. Following their recent trend of witholding information about their research, they released 
-                a white paper that makes a few ambiguous references to what they seem to be doing. They do, however, reveal in depth O1's impressive benchmark
-                results. 
-            </p>
-
-            <p class="text-gray-300 mb-4">
-                Incorporating planning based methods (RL in particular) with LLM training has been an exciting problem a number of researchers have been working towards.
-                It's the kind of solution that seems intuitive and obvious to people on the outside, but is actually incredibly hard to pull off (for reasons I'll go into further).
-            </p>
-                
-            <p class="text-gray-300 mb-4">
-                I thought it would be a good exercise for me to review surrounding literature to try and interpret what OpenAI might be doing here, and that's what this "article"
-                is going to be about. Before getting into it, I wanted to be upfront about what this will include and what it will not include. 
-            </p>
-            <p class="text-gray-300 mb-4">
-                <strong>What this is:</strong> 
-            </p>
-            
-            <p class="text-gray-300 mb-4">
-                <strong>What this is not:</strong>
-            </p>
         </div>
 
         <div id="bookshelf" class="mb-12">
@@ -252,20 +225,105 @@
         </div>
     
         <div id="thought2" class="mb-12">
-            <h3 class="text-2xl font-normal mb-4 text-white">O1: Modeling Natural Language Chain of Thought as a Reinforcement Learning Problem</h3>
-            <p>
-                Last week, OpenAI released their newest model, O1. Following their recent trend of witholding information about their research, they released 
-                a white paper that makes a few ambiguous references to what they seem to be doing. They do, however, reveal in depth O1's impressive benchmark
-                results. 
+            <h3 class="text-3xl font-normal mb-4 text-white">O1: Modeling Chain of Thought Generation as a Reinforcement Learning Problem</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">Aryaman Pandya</h3>
+            <br>
+            <p>In game-playing systems, neural networks perform considerably worse than versions of themself augmented with search. For example, a reproduction of AlphaZero showed that the network without Monte-Carlo Tree Search (MCTS) was able to achieve an chess ELO rating of 2500. This is high, but not by any means superhuman. The complete system with MCTS appended to the base model is able to achieve an ELO rating of 3500 (500 points higher than Magnus Carlson's).</p>
+            <br>
+            <p>During training and at test time, MCTS is able to search through potential futures, evaluate the outcomes of making different decisions, and select ones that maximize expected reward. In addition to test-time search, AlphaZero is trained with self-play, a Reinforcement Learning technique that enables the system to simulate games by playing against previous versions of itself. This synthetically generated experience reduces the dependency of the system on human generated training data and encourages deeper exploration of the solution space. This deep exploration can lead to the discovery of novel solutions in situations that are rarely encountered (see move 37, AlphaGo v/s Lee Sedol)</p>
+            <br>
+            <p>Similarly, embedding search-based mechanisms within the larger system should help large transformer-based language models produce better answers to hard, reasoning dependent problems. Hypothetically, these methods would enable the same kind of evaluation of future outcomes, allowing models to carefully answer questions while assessing the vast solutions pace.</p>
+            <br>
+            <p>Recently, OpenAI introduced the their "reasoning model", O1. O1 is said to have been trained using reinforcement learning and to "think" before answering questions. According to benchmark results reported by OpenAI, O1 indicates a step-function improvement to the capabilities of language models at solving difficult problems in domains like math, science and computer programming. Further, the publicly released O1-preview and O1-mini display step function improvements on the LMSYS leaderboard, which for the last year has primarily seen incremental improvements to its max score, thus proving its versatility in multiple domains. As we've come to expect, OpenAI withheld information about the training process they use as well as their datasets. They go as far as to protect the chains of thought generated by models in response to prompts. Therefore, what we can know about O1 is limited to the information they released in their blog posts, system card, and speculation from the community based on existing literature.</p>
+            <br>
+            <p>I thought it would be a good exercise for me to review surrounding literature to try and interpret what OpenAI might be doing here, and that's what this "article" is going to be about.</p>
+            <br>
+            <p>The success of O1 comes as the culmination of success of three intuitions:</p>
+            <br>
+            <ol class="list-decimal pl-5 mt-4 text-gray-300">
+                <li>Scaling the amount of compute available to the model at inference time leads to better answers to difficult questions</li>
+                <li>Chain of thought prompting elicits reasoning in large language models, and can be viewed as a policy improvement operator</li>
+                <li>We can use reinforcement learning in conjunction with large reward models to build out a self-training process</li>
+            </ol>
+            <br>
+            <p>In early 2022, OpenAI released "Chain of Thought Reasoning elicits reasoning in large language models". This paper demonstrated that including few-shot exemplars of chains of thought within prompts to the model can significantly increase the accuracy of its outputs. Interpretability research has shown that this is not just a surface level phenomenon, and that CoT prompting alters the weights of the attention layer, leading to different connections that produce better results. Few-shot CoT prompting has since been used as a reliable means of producing consistently higher quality outputs from language models across many domains. It is now standard practice to include samples that use CoT in datasets used to pre-train and fine-tune models.</p>
+            <br>
+            <p>While the description above would make it seem like this paper was the basis mainly for the first half of the second intuition listed above, I would argue that it fueled exploration along all of the other lines in that list. In this paper, the authors briefly mention that "additional compute can be allocated to more complex problems." While stated in passing (whether intentionally or not) this is a key insight we'll go into further detail on later on.</p>
+            <br>
+            <p>Shortly after the release of this paper, a Stanford group released "STaR: Bootstrapping Reasoning With Reasoning". This paper introduces the STaR (Self-taught Reasoner) fine-tuning process that combines CoT prompting with outcome supervision to produce an iteratively improving model. STaR has a generally simple training process:</p>
+            <br>
+            <ol class="list-decimal pl-5 mt-4 text-gray-300">
+                <li>Using few shot CoT, produce responses from an LLM given a set of prompts</li>
+                <li>Using automation, check for correctness of the outputs</li>
+                <li>Append correct solutions (including the CoT that led to them) to a dataset that can be used to fine tune the model</li>
+                <li>In situations where the answers are incorrect, prompt the LLM the correct answer and have it reverse engineer a CoT that would have led to this output</li>
+                <li>Include these in the dataset used for finetuning</li>
+                <li>Iterate</li>
+            </ol>
+            <br>
+            <p>This method leverages the results from the OpenAI paper that CoT improves model outputs, and builds a process that allows for the model to iteratively teach itself to develop better chains of thought. This led to significant improvements over the benchmark results of the base model: _____insert results here____</p>
 
-                I've been excited by the idea of tying together LLMs for a while now, and 
-            </p>
-            <p class="text-gray-300 mb-4">
-                <strong>What this is:</strong> An exploration of the idea that natural language chain-of-thought reasoning can be modeled as a reinforcement learning problem. This thought experiment aims to draw parallels between the process of human reasoning and the framework of reinforcement learning, potentially offering insights into both cognitive processes and AI development.
-            </p>
-            
-            <p class="text-gray-300 mb-4">
-                <strong>What this is not:</strong> A formal research proposal or a comprehensive analysis of the topic. This is not intended to be a rigorous academic paper, but rather a collection of initial thoughts and ideas that could potentially spark further discussion or investigation in this area.
+            <p>This paper also briefly formulates this the training objective as an approximation to the RL policy gradient objective. It doesn't, however, use this insight to guide the training process, or dive deeper into a mathematical analysis of this approximation.</p>
+            <br>
+            <p>STaR builds the intuition that more inference time compute can lead to better results, and also defines a self-play like training procedure. That being said, there were a few obvious shortcomings of this method:</p>
+            <br>
+            <ul class="list-disc pl-5 mt-4 text-gray-300">
+                <li>As long as the final answer is correct, a sample is included in the iteratively generated fine-tuning dataset. This will include outputs where the CoT is erroneous but somehow the model produced the correct final answer.</li>
+                <li>The authors try to avoid wasting data by generating reverse engineered CoTs, but these could produce an exaggerated version of the problem in bullet 1. There's no means in the methodology of this paper to verify that the forced CoTs contain coherent reasoning.</li>
+                <li>There's value in learning from true negatives that this process leaves on the table.</li>
+            </ul>
+            <br>
+            <p>The first two limitations mentioned above are due to the lack of process supervision. In outcome supervision, we use the correctness of the output of the model as the sole determinant of what samples to include in our dataset. In process supervision, we judge the correctness of not just the final result, but of each step that led to it. To address this, in  "Let's verify step-by-step", researchers from OpenAI train a Process-supervised Reward Model (PRM) by fine-tuning a base model on this human annotation</p>
+            <br>
+            <p>In this work, the authors focus solely on training a PRM, and not on fine-tuning the generator model. They do, however, state that "fine-tuning with RL is a natural next step." (Possibly foreshadowing O1?) Before kicking off the PRM training process, they fine-tune the generator to ensure that it produces CoTs in a consistent, line delimited format. They kick off the training with an initial batch in the following way:</p>
+            <br>
+            <ol class="list-decimal pl-5 mt-4 text-gray-300">
+                <li>Collect generator outputs</li>
+                <li>Get human-annotation on these outputs</li>
+                <li>Train the process reward model by fine-tuning a base model on this human annotation</li>
+            </ol>
+            <br>
+            <p>Then, they begin the iterative training procedure:</p>
+
+            <ol class="list-decimal pl-5 mt-4 text-gray-300">
+                <li>Collect generator outputs</li>
+                <li>Determine the "most convincing wrong answers" using the latest version of the PRM. These are answers that are determined to be wrong, but contained CoTs that were able to trick the PRM.</li>
+                <li>Surface the "most convincing wrong answers" to human annotators for labeling</li>
+                <li>Include this newly labeled data in the training set</li>
+                <li>Re-train the PRM on this data</li>
+                <li>Repeat steps 1-5 iteratively until some level of convergence</li>
+            </ol>
+            <br>
+            <p>An important detail to note is that the PRM also evaluates the final answer and treats it like any other step in the CoT.</p>
+
+            <p>As part of their evaluation procedure, the authors develop an ORM in addition to the PRM to compare performance. They find that while both methods outperform the base model with few-shot CoT and majority voting, the PRM considerably outperforms the ORM on (78.2% accuracy v/s 72.4% accuracy). This is insightful — the coherence of the CoT is important in leading it to a correct answer. It further underlines the idea that a purely outcome based model (like STaR) have areas for improvement, and encourages further work to train verifiers for the process, not just the outcome. I think there's a strong possibility that this training procedure, and RL based generator improvements are two of the fundamental building blocks of O1.</p>
+            <br>
+            <p>The authors of the STaR paper subsequently released a paper detailing the "Quiet-STaR" algorithm. This paper acknowledges and builds off of the following shortcomings of STaR identified by the authors:</p>
+
+            <ul class="list-disc pl-5 mt-4 text-gray-300">
+                <li>They trained and evaluated STaR on very narrow domains and only on question-answer type samples.</li>
+                <li>Training on labeled samples of CoT is expensive and also off-policy.</li>
+            </ul>
+            <br>
+            <p>To address these shortcomings, instead of training only on question-answer samples and basing the objective on the outcome, they formulate a non-myopic auto-regressive objective. Ie. They supervise their training procedure on the semantic correctness of the next N tokens predicted based on a rationale. They train the model on a more vast corpus of text, specifically the _____insert datasets here______.</p>
+            <br>
+            <p>The Quiet-STaR paper takes the idea of scaling inference-time compute further than the previously discussed algorithms. At each token in the input sequence, the model generates multiple rationales of length T to aid in the prediction of the next tokens in the sequence. This process obviously creates orders of magnitude of increased computational complexity which the authors reduce by generating these tokens in parallel for n tokens in the input sequence using a cached attention mask. Image <insert number> helps visualize this process, and the open source code <insert link> details how this was implemented.</p>
+            <br>
+            <p>The objective of the training procedure is the sum of two separate loss functions. The first of these is the negative log likelihood loss of the predicted N tokens. The second of these is a formulation REINFORCE loss function. In order to construct the REINFORCE loss, they define the reward function as the difference between p^talk and p^-talk. This is then represented as:</p>
+            <br>
+            <p>This training procedure leads to improvements in the quality of outputs, with some notable improvements against the baseline being:</p>
+            <br>
+            <p>While these numbers are measurable improvements, they are far less impressive when normalizing this improvement by the increased computational complexity. This procedure also raises a few questions, a few of which were raised by the authors in the paper:</p>
+            <br>
+            <ul class="list-disc pl-5 mt-4 text-gray-300">
+                <li>The authors note that the thought tokens (and therefore added inference time compute) helped with certain types of text, but with other domains led to no measurable improvements. Why is this procedure worth it then? Wouldn't this be a waste of both inference and training compute? Should we focus on narrower datasets for such fine-tuning?</li>
+                <li>They note that even within the same text, not all tokens benefit from having thought tokens leading up to them. This may lead to a waste of compute and realistically would be impractical to deploy in any production system</li>
+            </ul>
+            <br>
+            <p>It's unlikely O1 is doing something like this on every single token, but I thought the formulation of the reinforce loss was an interesting method that could be used in other training procedures as well.</p>
+            <br>
+            <p>Several other papers propose approaches along the lines of these previous works. For example, V-STaR trains a verifier during the STaR training process to learn from wrong answers too. Instead of creating reverse engineered CoTs in the case of wrong answers, we use both the wrong and correct solutions to train a verifier using DPO. At inference time, this verifier is used as a judge to select an answer from K proposals.</p>
+            <br>
             </p>
         </div>
     </div>

@@ -260,7 +260,7 @@
                 <li>Include these in the dataset used for finetuning</li>
                 <li>Iterate</li>
             </ol>
-            <img src="star.png" alt="STaR Algorithm" class="w-3/4 mx-auto mb-2 mt-2">
+            <img src="images/star.png" alt="STaR Algorithm" class="w-3/4 mx-auto mb-2 mt-2">
             <p class="text-base text-gray-400 text-center">The formal STaR algorithm from the paper</p>
             <br>
             <p>This method builds on the results from the OpenAI paper that CoT improves model outputs, and builds a process that allows for the model to iteratively teach itself to develop better chains of thought. This led to significant improvements over the benchmark results of the base model. For
@@ -316,7 +316,7 @@
             <br>
             <p>To address these shortcomings, instead of training only on question-answer samples and basing the objective on the outcome, they formulate a non-myopic auto-regressive objective. Ie. They supervise their training procedure on the semantic correctness of the next N tokens predicted based on a rationale. They train the model on a more vast corpus of text, specifically OpenWebMath and Colossal Clean Crawled Corpus (C4).</p>
             <br>
-            <img src="quiet_star.png" alt="Quiet-STaR Parallel Generation" class="w-1/2 mx-auto mb-2 mt-2">
+            <img src="images/quiet_star.png" alt="Quiet-STaR Parallel Generation" class="w-1/2 mx-auto mb-2 mt-2">
             <p class="text-base text-gray-400 text-center">Parallel generation process in Quiet-STaR algorithm</p>
             <br>
             <p>The Quiet-STaR paper takes the idea of scaling inference-time compute further than the previously discussed algorithms. At each token in the input sequence, the model generates multiple rationales of length T to aid in the prediction of the next tokens in the sequence. This process obviously creates orders of magnitude of increased computational complexity which the authors reduce by generating these tokens in parallel for n tokens in the input sequence using an efficiently cached attention mask. helps visualize this process, and the open source code <insert link> details how this was implemented.</p>
@@ -346,14 +346,14 @@
                 <li>Scaling inference time compute helps more on more difficult problems as long as the base LLM contains the knowledge required to come up with an answer. The most challenging types of questions still benefit from additional pre-training data/compute. This result is loosely illustrated in the figure below.</li>
             </ul>
             <br>
-            <img src="difficulty.png" alt="Relationship between problem difficulty and scaling methods" class="w-3/4 mx-auto mb-2 mt-2">
+            <img src="images/difficulty.png" alt="Relationship between problem difficulty and scaling methods" class="w-3/4 mx-auto mb-2 mt-2">
             <p class="text-base text-gray-400 text-center mb-4">Effectiveness of scaling methods across problem difficulty levels</p>
             <br>
             <p>Instead of using human annotation to train a PRM (like PRM800k), based on Wang et al. <a href="#citation-6" style="color: #87CEEB;">[<span style="color: #87CEEB;">6</span>]</a> they train and supervise one using estimates of per-step correctness obtained from running Monte Carlo rollouts from each step in the solution.</p>
             <br>
             <p>Below, I briefly describe the different methods they examined, and the results they each obtain.</p>
             <h3 class="text-xl font-semibold mt-4 mb-2">Verifier-based methods</h3>
-            <img src="prm_search.png" alt="PRM Search Methods Comparison" class="w-3/4 mx-auto mb-4 mt-6">
+            <img src="images/prm_search.png" alt="PRM Search Methods Comparison" class="w-3/4 mx-auto mb-4 mt-6">
             <p class="text-base text-gray-400 text-center mb-2">Different PRM-based search methods</p>
             <br>
             <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-300">
@@ -363,7 +363,7 @@
                 <li><strong>Majority voting:</strong> multiple solutions are generated, and the most common final answer is selected as the output. Performance hits a wall as the budget grows.</li>
             </ul>
             <br>
-            <img src="verifier_results.png" alt="Verifier-based methods performance on MATH dataset" class="w-1/2 mx-auto mb-4 mt-4">
+            <img src="images/verifier_results.png" alt="Verifier-based methods performance on MATH dataset" class="w-1/2 mx-auto mb-4 mt-4">
             <p class="text-base text-gray-400 text-center mb-2">Performance of verifier-based methods on MATH dataset vs. inference compute budget</p>
             <br>
             <h3 class="text-xl font-semibold mt-4 mb-2">Refining Proposal Distribution</h3>

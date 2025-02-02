@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>Publications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: rgba(59, 130, 246, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .back-to-top:hover {
+            opacity: 1;
+        }
+        .section-header {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #60a5fa;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .job-title, .project-title, .education-title, .publication-title, .volunteer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e5e7eb;
+        }
+        .job-details, .project-details, .education-details, .publication-details, .volunteer-details {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+        }
+        .job-description, .project-description, .education-description, .publication-description, .volunteer-description {
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-bottom: 1rem;
+        }
+        .job-skills, .project-skills, .education-skills, .publication-skills, .volunteer-skills {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #9ca3af;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .navbar {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-800 opacity-70 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="index.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="publications.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="Essays.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="bookshelf.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="quotes.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24 py-8 mt-6 mb-8">
+            <section id="publications" class="mb-12">
+                <h2 class="section-header">Publications</h2>
+                <strong class="publication-title">"Advancing the State of AV-Human Road User Interaction: Challenges and Opportunities"</strong> [<a href="https://www.researchgate.net/publication/369659327_Advancing_the_State_of_AV-Vulnerable_Road_User_Interaction_Challenges_and_Opportunities" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">AAAI 2023, Stanford, California</p>
+                <strong class="publication-title">"Design Factors for Supporting Pedestrian-AV Interaction at Crosswalks"</strong> [<a href="https://dl.acm.org/doi/10.1145/3568294.3580107" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">HRI 2023, Stockholm, Sweden</p>
+                <strong class="publication-title">"Insights on Autonomous Vehicle Interaction Protocols with First Responders"</strong> [<a href="https://dl.acm.org/doi/abs/10.1145/3568294.3580114" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">HRI 2023, Stockholm, Sweden</p>
+                <strong class="publication-title">"Communicating Lane Change Intent in Autonomous Vehicles"</strong> [<a href="https://dl.acm.org/doi/abs/10.1145/3568294.3580113" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">HRI 2023, Stockholm, Sweden</p>
+                <strong class="publication-title">"The Road Ahead: Advancing Interactions between Autonomous Vehicles, Pedestrians, and Other Road Users"</strong> [<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=51f1lmUAAAAJ&citation_for_view=51f1lmUAAAAJ:qjMakFHDy7sC" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">IEEE RO-MAN 2023, Busan, South Korea</p>
+                <strong class="publication-title">"nuReality: A VR environment for research of pedestrian and autonomous vehicle interactions"</strong> [<a href="https://arxiv.org/abs/2201.04742" class="text-gray-200 hover:text-white hover:underline">paper</a>]
+                <p class="publication-details">arXiv preprint</p>
+            </section>
+        </main>
+    </div>
+
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+
+    <footer class="bg-gray-900 py-4">
+        <p class="text-center text-gray-400">&copy; 2024 Aryaman Pandya. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hover effect for project and publication links
+        const links = document.querySelectorAll('#projects a, #publications a');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.textDecoration = 'underline';
+                link.style.color = '#ffffff'; // White on hover
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.textDecoration = 'none';
+                link.style.color = '#e5e7eb'; // Back to original light gray color
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>

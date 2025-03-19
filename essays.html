@@ -94,7 +94,7 @@
             <h3 class="text-3xl font-normal mb-4 text-white">2024 in hindsight</h3>
             <h3 class="text-xl font-normal mb-4 text-slate-400">December 27, 2024</h3>
             <br>
-            <p>Unless you occasionally choose to operate at a significant proportion of the speed of light, the way you experience each year of your adult life should feel temporally alike. Despite this fundamental constraint, many claim that the rate at which you experience life “speeds up” after a certain age. Some claim that this has to do with a reduced frequency of novel events, while other work argues it has something to do with neurodegeneration and a reduced efficiency in visual perception. In supporting either one of those points of view, I would be well out of my depth.            </p>
+            <p>Unless you occasionally choose to operate at a significant proportion of the speed of light, the way you experience each year of your adult life should feel temporally alike. Despite this fundamental constraint, many claim that the rate at which you experience life "speeds up" after a certain age. Some claim that this has to do with a reduced frequency of novel events, while other work argues it has something to do with neurodegeneration and a reduced efficiency in visual perception. In supporting either one of those points of view, I would be well out of my depth.            </p>
             <br>
             <p>Regardless of the cause (or existence) of such phenomena, I thought it might be a good idea to write out a fresh recounting of the year I just experienced before my brain undoubtedly starts its process of confabulation. </p>
             <br>
@@ -106,7 +106,7 @@
             <p>Eventually, my time at Motional was cut short due to <a href="https://techcrunch.com/2024/05/14/motional-cut-about-550-employees-around-40-in-recent-restructuring-sources-say/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">restructuring</a> at the company. Nonetheless, I'm grateful for what I learned there and the people I got to work with. Shortly after this, I started a new role at Intersystems Corporation in Cambridge, MA.</p>
             <br>
             <h2 class="text-2xl font-semibold mb-4">Programming</h2>
-            <p>I spent a good amount of my “free time” building independent projects this year. With some of these, the focus was the process. I built things with the objective to learn the skills necessary to build them. Others were built with the intent to produce real value. I’ve listed some of these from each category below.            </p>
+            <p>I spent a good amount of my "free time" building independent projects this year. With some of these, the focus was the process. I built things with the objective to learn the skills necessary to build them. Others were built with the intent to produce real value. I've listed some of these from each category below.            </p>
             <br>
             <h3 class="text-xl font-semibold mb-4">Educational</h3>
             <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
@@ -231,7 +231,7 @@
             <p>STaR builds the intuition that more inference time computation can lead to better results, and also defines a self-play like training procedure. That being said, there were a few obvious shortcomings of this method:             </p>
             <br>
             <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>As long as the final answer is correct, a sample is included in the iteratively generated fine-tuning dataset. This will include outputs where flawed CoT’s mistakenly yielded correct answers.
+                <li>As long as the final answer is correct, a sample is included in the iteratively generated fine-tuning dataset. This will include outputs where flawed CoT's mistakenly yielded correct answers.
                 </li>
                 <li>The authors try to avoid wasting data by generating reverse engineered CoTs, but these could produce an exaggerated version of the problem in bullet 1. There's no means in the methodology of this paper to verify that the forced CoTs contain coherent reasoning. </li>
                 <li>This paper ignores the learning benefit that could come from samples where the model fails entirely (true negatives).</li>
@@ -354,6 +354,28 @@
                 <li id="citation-11">Snell, Charlie, et al. "Scaling llm test-time compute optimally can be more effective than scaling model parameters." arXiv preprint arXiv:2408.03314 (2024).</li>
                 <li id="citation-12">Qu, Yuxiao, et al. "Recursive introspection: Teaching language model agents how to self-improve." arXiv preprint arXiv:2407.18219 (2024).</li>
             </ol>
+        </div>
+
+        <!-- Article divider -->
+        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
+
+        <div id="bitter-lesson" class="mb-12">
+            <h3 class="text-3xl font-normal mb-4 text-white">The (Human) Bitter Lesson</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">October 1, 2024</h3>
+            <br>
+            <p>Rich Sutton, artificial intelligence legend and co-founder of the field of reinforcement learning (and newly one-half of a Turing Award), wrote an essay titled "The Bitter Lesson" where he expresses that the bitter lesson he's learned to swallow over his career in AI is that "general methods that leverage computation are ultimately the most effective, and by a large margin."</p>
+            <br>
+            <p>The implication of the bitter lesson is simple: whether it's via Moore's law or Jensen's law (the specifics don't really matter since an exponential can be interpreted as infinitely many overlapping sigmoids), we're consistently advancing the amount of computational power available, and the best techniques to build artificial intelligence will be those that can improve proportionately with an increase in computational resources.</p>
+            <br>
+            <p>Therefore, what we want are algorithms that are compute-hungry and for which we can establish laws of scaling. We've learned that some techniques scale better when provided with a lot of data, a lot of time, and a lot of FLOPs. I want to point out here that this bitter lesson extends beyond our synthetic successors to our organic peers as well.</p>
+            <br>
+            <p>Let's start by considering improvement in sports. You can generally break down most sports into a combination of endurance, strength, speed, and technique/skill. Oftentimes, athletes treat these as discrete properties, but there are indeed relationships between them that allow for optimal scaling. We can think of skill, and more specifically an athlete's technique, as the algorithm, and the sum of their endurance, strength, and speed (there are other factors too, such as balance, flexibility, resilience, but let's keep it concise for now) as the compute equivalent in this system. The best athletes in the world are those whose technique allows for their performance to improve consistently with improvements in their attributes (compute). For example, a professional athlete who plays a sport like tennis or squash that involves explosive movements and constant changes in direction will reach a point of diminishing returns if their technique involves wasted movement and excessive strain or friction on their joints. Someone nimble on their toes can sustain a higher computational gain than someone who is flat-footed and makes aggressive contact with the ground.</p>
+            <br>
+            <p>The difference between the human body and computer chips is that the scaling of the former is much more bounded than that of the latter. There is some theoretical limit (based on the athlete's genetics, diet, etc.) to how much output they can produce, although we should probably consider this an area of weakness as a species (athletes today are better than athletes from a hundred years ago, but our rate of improvement is measly compared to computers). Instead of focusing solely on humans' inherent athletic ability, we can focus on an individual's output. That is, we might not be able to improve FLOPs, but we most certainly can improve the total FLOP budget by spending more time in the gym and focusing on recovery.</p>
+            <br>
+            <p>All of the comparisons drawn above can be mirrored with the mind as well. We might not be able to improve our mental capacity significantly (again, we really should be figuring out how to), but we can improve our total compute budget by doing more things, staying consistent, and growing our output while adapting to methods that promote compute-optimal learning (spending one hour building something from scratch may be more valuable than spending ten hours reading about how to build that thing). We also want to avoid things like burnout and keep the learning process stimulating.</p>
+            <br>
+            <p>We're bitter-lesson learners as well, but our ability to scale our compute budget is limited. How can we lift this burden? We can make small advances by improving lifestyle choices, but that won't get us close to the rate of improvement of our silicon successors. What kinds of biological and neurological advances will allow us to keep up with scale? What techniques should we employ for the tasks we fulfill? After all, we want to build synthetic intelligence to help us live better lives, not so that we can rest our burdens on their backs.</p>
         </div>
     </div>
 

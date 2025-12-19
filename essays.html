@@ -85,12 +85,52 @@
 
         <div class="mb-16 bg-slate-800 rounded-xl p-6 max-w-lg mx-auto">
             <ul class="space-y-2 text-center">
+                <li><a href="#decade-for-century" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">A Decade for a Century</a></li>
                 <li><a href="#digital-worlds" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Digital Worlds</a></li>
                 <li><a href="#bitter-lesson" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">The (Human) Bitter Lesson</a></li>
                 <li><a href="#hindsight" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">2024</a></li>
                 <li><a href="#o1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">O1</a></li>
             </ul>
         </div>
+
+        <div id="decade-for-century" class="mb-12">
+            <h3 class="text-3xl font-normal mb-4 text-white">A Decade for a Century</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">December 19, 2025</h3>
+            <br>
+            <p><a href="https://arxiv.org/abs/2303.12712" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Sparks of Artificial General Intelligence</a> were first reported when <a href="https://openai.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">OpenAI</a> released <a href="https://openai.com/research/gpt-4" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">GPT-4</a> in March 2023. 2 years and several months later, some may say we are yet to see the flames. Whether autoregressive language models are a straight shot to superintelligence or an off ramp on the journey there is a highly overplayed debate that I will abstain from engaging in. It is, however, increasingly obvious to me that the sparks we saw were symbolic of a new chapter of human pursuit.</p>
+            <br>
+            <img src="images/ylc.png" alt="Yann LeCun tweet" class="w-full max-w-xl mx-auto mb-4 mt-4">
+            <br>
+            <p>In 2023, the world woke up to the realization that 1. We have the compute and infrastructure to run ungodly parallel workloads consuming tens of gigawatts of energy, and 2. The learning algorithms we have (neural networks, and more particularly transformers), are incredible at learning low-loss representations of petabytes of data while optimizing for a generalized objective. <a href="https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">AlexNet</a> 2.0.</p>
+            <br>
+            <p>Since then, we've seen similar recipes produce captivating results in a number of unique domains. Image generation models like <a href="https://www.midjourney.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Midjourney</a>, video generation models like <a href="https://runwayml.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Runway's Gen-4.5</a>, generalist robot policies from <a href="https://www.physicalintelligence.company/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Physical Intelligence</a>, human-like self-driving models from <a href="https://www.tesla.com/AI" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Tesla</a> and <a href="https://wayve.ai/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Wayve</a>, all apply different variations of the same sets of techniques. As a consequence of this technology, the world today is very different from the world 10 years ago (despite the fact that our primate brains are great at normalizing exponentials).</p>
+            <br>
+            <p>When GPT-4 was released, a bunch of images like the following went viral.</p>
+            <br>
+            <img src="images/gpt_4_5.png" alt="GPT-4 vs GPT-5 size comparison" class="w-full max-w-2xl mx-auto mb-4 mt-4">
+            <br>
+            <p>The implication was that the jump from GPT-4 to GPT-5 would represent an increase of several orders of magnitude in the model's parameter count. While the number of parameters in the GPT-5 model is unknown to the public, I'd wager that it is roughly of the same order of magnitude as its whole number predecessor. This is not to say the models aren't an order of magnitude better. There are a number of different evaluations that demonstrate the exponential improvement of models at performing useful tasks. One that I particularly like is METR's <a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">"Measuring AI Ability to Complete Long Tasks,"</a> which benchmarks models based on how long the tasks they can autonomously complete would take human experts. The length of tasks models can coherently perform to a high degree has grown astoundingly.</p>
+            <br>
+            <img src="images/metr_eval.png" alt="METR evaluation showing exponential growth in task completion time horizon" class="w-full max-w-4xl mx-auto mb-2 mt-4">
+            <p class="text-base text-gray-400 text-center mb-4">Task completion time horizons have been doubling every ~7 months. Source: <a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">METR</a></p>
+            <br>
+            <p>We haven't actually entered the next era of truly gigantic training runs yet: we don't have enough purpose-built datacenters, and even the biggest clusters we do have are bottlenecked by physical infrastructure (power, cooling, networking, energy), and software infrastructure (fault-tolerant distributed training orchestration, high-throughput data pipelines, robust checkpointing and recovery). Most of the gains above have come from squeezing more out of roughly the same hardware: better kernels and architectures (<a href="https://arxiv.org/abs/2205.14135" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">flash attention</a>, <a href="https://arxiv.org/abs/2305.13245" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">GQA</a>, <a href="https://arxiv.org/abs/2405.04434" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">MLA</a>, MoE and more), smarter training setups with synthetic data and <a href="#o1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">reinforcement learning</a>, and a willingness to spend far more compute at inference time instead of only during model training. There's no reason we can't build a "2024-tier" model on "2020-tier" hardware in 2025 using modern recipes; you can already see this in hobby projects that replicate frontier behavior in small models on aging GPUs.</p>
+            <br>
+            <p>The floor is dropping on the cost per unit of intelligence while in the background the ceiling is rising on how much compute and capital we can throw at the problem at once. Bigger, better infrastructure doesn't just let us run single massive jobs, it lets us run many more jobs, ablations, and wild ideas in parallel. The compounding of those two trends will ensure that the exponential stays exponential and that this idea extends beyond language-driven domains like software engineering.</p>
+            <br>
+            <img src="images/intelligence_price_ratio.png" alt="Artificial Analysis Intelligence to Price Ratio showing exponential improvement" class="w-full max-w-3xl mx-auto mb-2 mt-4">
+            <p class="text-base text-gray-400 text-center mb-4">Source: <a href="https://press.airstreet.com/p/the-state-of-ai-report-2025" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">State of AI Report 2025</a>, Air Street Capital</p>
+            <br>
+            <p>In the 1880s, early electric lighting felt like the whole story. Bulbs and arc lamps were a visible miracle (something the general public could see and feel the impact of themselves) and that's where attention and capital flowed. But the real revolution wasn't the bulb; it was the grid. The hard, unglamorous work of laying copper, building generators, standardizing voltages, and wiring cities turned electricity from a spectacle into infrastructure. Once the grid existed, the world reorganized itself around it: factories, cities, communication, even sleep cycles changed. We then built infinitely many more visible miracles with this infrastructure and a matured understanding of how we can optimally use it.</p>
+            <br>
+            <p>A century later, the same story played out again with the internet. In the 1990s, everyone thought the revolution was websites. The bubble inflated around shiny domains and digital stores like <a href="https://en.wikipedia.org/wiki/Pets.com" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">pets.com</a>. But the real transformation came later, when the boring parts matured. Servers, fiber optics, data centers, protocols, software and cloud infrastructure rewired the entire economy. The bubble popped, but the foundations it left behind built everything we use today.</p>
+            <br>
+            <p>We're in a similar place now with synthetic intelligence. There's a lot of focus on bulb development (which is fair and warranted) but not enough people removed from the frontier are thinking about the grid. The real story of the 2020s will be the world we build for our synthetic counterparts to inhabit.</p>
+            <br>
+            <p><strong>Over the next decade, we'll build the infrastructure and improve algorithmic data efficiency to lay the foundation for the next century.</strong></p>
+        </div>
+
+        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
 
         <div id="digital-worlds" class="mb-12">
             <h3 class="text-3xl font-normal mb-4 text-white">Digital Worlds</h3>

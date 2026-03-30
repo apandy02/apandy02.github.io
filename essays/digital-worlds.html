@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - Digital Worlds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-800 opacity-70 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">Digital Worlds</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">December 16, 2025</h3>
+            <br>
+            <p>One of the biggest bottlenecks AIs will come up against are the physical limitations of the "real" world. <a href="https://darioamodei.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Dario Amodei</a> talks about this extensively in his <a href="https://darioamodei.com/machines-of-loving-grace" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Machines of Loving Grace</a> essay: intelligence alone doesn't bend the laws of physics. Even if AI is able to think at the speed of the electrons powering it, in order to discover new things in the real world, it needs to be able to interact with it. These interactions are subject to fundamental constraints of the physical world. As a super simple illustration of this problem, think of an agent whose job is to find a cure for cancer. The scientific methods for testing whether a proposed treatment is safe and effective are time-consuming and may put participants at risk. For example, the typical <a href="https://jamanetwork.com/journals/jama/fullarticle/1835506" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">FDA approval process</a> for a new drug takes approximately 8-10 years from initial testing to approval. Similar challenges arise in robotics, where robots must interact with the physical world, particularly in safety-critical systems.</p>
+            <br>
+            <p><strong>How do we overcome this limitation?</strong></p>
+            <br>
+            <p>By building really good models of the world. If we can simulate the dynamics of the world to a precise enough degree that results in the simulator correspond to the same results in the real world (within a degree of mathematical precision), agents can propose, test, and verify a lot more solutions in the simulator, subject only to the latency and fidelity of said simulator.</p>
+            <br>
+            <p>This is not a new idea. We've built simulators pretty much since we've had computers, and they've enabled us to build great things. However, we're just about getting to the point where we have the infrastructure, domain knowledge, and general-purpose learning algorithms to build high-fidelity, data-driven simulators of the world. Taking the self-driving space as an example: roughly all simulators that were actually used to train/test driving agents were physics simulators. These simulators, much like game engines, are designed with a human model of real-world physics. For example, a specified gravitational force is applied to objects in the simulator, frictional coefficients are specified for surfaces and tires, and so on. These kinds of simulators are a classic case of <a href="https://en.wikipedia.org/wiki/Polanyi%27s_paradox" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Polanyi's paradox</a>. While we think we know and can specify all of the physics necessary to perfectly simulate a driving environment, we miss out on the subtle, tacit regularities of reality that we don't even know to write down. Lucky for us, we no longer have to rely (purely) on these kinds of simulators. Instead, we can learn models of the world from data.</p>
+            <br>
+            <p><strong>So what is a world model?</strong> A world model takes in a state of the world, and can predict what the next state of the world will be given an action; in other words, a learned transition function. Going back to the self-driving example, a world model would be a model that takes in as input the state of the scene around a car (this can be a combination of different sensory inputs: camera/imu/radar/lidar), an action, and then outputs what the next state of the scene around the car would be. A great example of this is <a href="https://wayve.ai/press/wayve-launches-gaia3/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Wayve's GAIA-3</a>. This model takes as input video, is conditioned on an action, and produces future frames of the video.</p>
+            <br>
+            <p>There's been a huge interest in building video world models, and the commercial viability of generative media has made it easy to justify the investment. But the end game here is not content generation; that's just the visible surface of something deeper. These models learn internal representations of how the world behaves, and that latent world knowledge is exactly what robotics wants. As our feeds are flooded with sloppy <a href="https://openai.com/sora" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Sora</a> and <a href="https://deepmind.google/technologies/veo/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Veo</a>-generated video and our parents' generations suffer defeat at the hands of the misinformation monster, the labs pumping out this content will be trying to transfer the internal world models learned by these generative models to generate high-fidelity robot training grounds. It's no surprise that <a href="https://deepmind.google/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Google DeepMind</a> built <a href="https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">SIMA 2</a>, an agent that can play, reason, and learn inside virtual 3D worlds, and trained it within <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Genie</a>-generated environments. SIMA 2 can self-improve through trial-and-error entirely without human feedback, paving the way for agents that learn and grow with minimal human intervention. More recently, DeepMind demonstrated <a href="https://arxiv.org/abs/2512.10675" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">using Veo as a world simulator</a> to evaluate Gemini Robotics policies, validating predictions against 1600+ real-world trials.</p>
+            <br>
+            <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" class="block w-full max-w-3xl mx-auto mb-2 mt-4" target="_blank">
+                <img src="https://img.youtube.com/vi/PDKhUknuQDg/maxresdefault.jpg" alt="Genie 3: A large-scale foundation world model" class="w-full rounded-lg hover:opacity-80 transition-opacity duration-200">
+            </a>
+            <p class="text-base text-gray-400 text-center mb-4">Genie 3: A large-scale foundation world model. <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" class="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank">Watch on YouTube</a></p>
+            <br>
+            <p>While action-conditioned visual world models are an extremely promising line of work, <strong>the physics of the world isn't purely visual.</strong> In the real world, we feel objects, experience contact forces, and many of these physical concepts aren't purely visually observable. I recently read an interesting paper from ETH Zurich, <a href="https://arxiv.org/abs/2501.10100" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Robotic World Model,</a> that trained a robot in a learned world model where the model predicts the robot's physical state (joint angles, velocity, torque, and so on) as well as privileged information like contact forces. We have proof that these kinds of models work in a model-based reinforcement learning setting, and we're developing really good visual/sensory world models. I'm super interested in lines of research that combine these two concepts to build more holistic world models for physical AI agents to be trained in.</p>
+            <br>
+            <p><strong>So does this mean everything will be trained inside learned world models?</strong></p>
+            <br>
+            <p>Not necessarily. Learned models shine in data-rich, visually grounded settings; hand-crafted simulators shine where the mechanisms are known but the data isn't. The key is finding the right balance between them to bootstrap progress. Traditional simulators are what got us to the dance: <a href="https://waymo.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Waymo</a>, <a href="https://getcruise.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Cruise</a>, and other self-driving companies built compelling systems using physics-based simulators. <a href="https://www.aboutamazon.com/news/tag/robotics" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Amazon Robotics</a> deployed over 750,000 robots that were heavily tested in hand-crafted environments, with analysts estimating their advanced robotics technology could generate <a href="https://www.benzinga.com/25/02/43461425/amazons-advanced-robotics-could-save-10b-annually-by-2030-predicts-morgan-stanley/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">annual cost savings exceeding $10 billion by 2030</a>. But as these systems operate in the real world, they generate exactly the kind of observation data that learned world models need. Hand-crafted simulators give us safe places to get started; learned models let us capture the long tail of reality that we could never specify by hand. You use one to bootstrap the other. We need to build digital worlds for different processes: biological, neurological, physical, chemical. Some will be carefully designed from first principles, some will be learned from data, and increasingly, they'll be hybrids. But as data constraints ease and learning algorithms grow more efficient, the balance will shift: neural simulation will become dominant. These are the training and testing grounds for agents before they act in our world.</p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+    </footer>
+</body>
+</html>

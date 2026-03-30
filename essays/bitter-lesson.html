@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - The (Human) Bitter Lesson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-800 opacity-70 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">The (Human) Bitter Lesson</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">March 19, 2025</h3>
+            <br>
+            <p>Rich Sutton, artificial intelligence legend and co-founder of the field of reinforcement learning (and newly one-half of a <a href="https://awards.acm.org/about/2024-turing" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Turing Award</a>), wrote an essay titled <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">The Bitter Lesson</a> where he expresses that the bitter lesson he's learned to swallow over his career in AI is that "general methods that leverage computation are ultimately the most effective, and by a large margin."</p>
+            <br>
+            <p>The implication of the bitter lesson is simple: whether it's via <a href="https://en.wikipedia.org/wiki/Moore%27s_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Moore's law</a> or <a href="https://en.wikipedia.org/wiki/Huang%27s_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Huang's law</a> (the specifics don't really matter since an exponential can be interpreted as infinitely many overlapping sigmoids), we're consistently advancing the amount of computational power available, and the best techniques to build artificial intelligence will be those that can improve proportionately with an increase in computational resources.</p>
+            <br>
+            <p>Therefore, what we want are algorithms that are compute-hungry and for which we can establish <a href="https://en.wikipedia.org/wiki/Neural_scaling_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">laws of scaling</a>. We've learned that some techniques scale better when provided with a lot of data, a lot of time, and a lot of FLOPs. I want to point out here that this bitter lesson extends beyond our synthetic successors to our organic peers as well.</p>
+            <br>
+            <p>Let's start by considering improvement in sports. You can generally break down most sports into a combination of endurance, strength, speed, and technique/skill. Oftentimes, athletes treat these as discrete properties, but there are indeed relationships between them that allow for optimal scaling. We can think of skill, and more specifically an athlete's technique, as the algorithm, and the sum of their endurance, strength, and speed (there are other factors too, such as balance, flexibility, resilience, but let's keep it concise for now) as the compute equivalent in this system. The best athletes in the world are those whose technique allows for their performance to improve consistently with improvements in their attributes (compute). For example, a professional athlete who plays a sport like tennis or squash that involves explosive movements and constant changes in direction will reach a point of diminishing returns if their technique involves wasted movement and excessive strain or friction on their joints. Someone nimble on their toes can sustain a higher computational gain than someone who is flat-footed and makes aggressive contact with the ground.</p>
+            <br>
+            <p>The difference between the human body and computer chips is that the scaling of the former is much more bounded than that of the latter. There is some theoretical limit (based on the athlete's genetics, diet, etc.) to how much output they can produce, although we should probably consider this an area of weakness as a species (athletes today are better than athletes from a hundred years ago, but our rate of improvement is measly compared to computers). Instead of focusing solely on humans' inherent athletic ability, we can focus on an individual's output. That is, we might not be able to improve FLOPs, but we most certainly can improve the total FLOP budget by spending more time in the gym and focusing on recovery.</p>
+            <br>
+            <p>All of the comparisons drawn above can be mirrored with the mind as well. We might not be able to improve our mental capacity significantly (again, we really should be figuring out how to), but we can improve our total compute budget by doing more things, staying consistent, and growing our output while adapting to methods that promote compute-optimal learning (spending one hour building something from scratch may be more valuable than spending ten hours reading about how to build that thing). We also want to avoid things like burnout and keep the learning process stimulating.</p>
+            <br>
+            <p>We're bitter-lesson learners as well, but our ability to scale our compute budget is limited. How can we lift this burden? We can make small advances by improving lifestyle choices, but that won't get us close to the rate of improvement of our silicon successors. What kinds of biological and neurological advances will allow us to keep up with scale? What techniques should we employ for the tasks we fulfill? After all, we want to build synthetic intelligence to help us live better lives, not so that we can rest our burdens on their backs.</p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - The Case for Video Native Computer Use Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar bg-slate-800 opacity-70 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-sm sm:text-lg normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">The Case for Video Native Computer Use Agents</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">March 30, 2026</h3>
+            <br>
+            <p>Within self-driving, there has long been a battle between two design philosophies. One is the original Waymo/Cruise school of thought, which treats the self-driving problem somewhat as a harness-engineering problem. The implicit assumption is that models are not yet intelligent enough to simply take in inputs and data and arrive at the right solution on their own, which leads practitioners to pack in as much information about the world as they know it. You can think of this as a form of inductive-bias injection or as high-level, partially learned feature engineering. Then, there's the end-to-end school of thought which treats the entire problem of self-driving as an intelligence problem; if I can train an artificial neural network that takes in raw input and outputs driving commands, I can get it to learn interesting representations internally and generalize to new data well. I see the world of computer use agents hitting a similar impasse in 2026.</p>
+            <br>
+            <p>Language models are awesome. They've been trained on trillions of tokens of natural language and image data from the internet, have generated tens of billions of dollars in revenue already, and exhibit tremendous capabilities across several different domains. As a software engineer, I've personally witnessed a paradigmatic shift introduced by intelligent machines over a short period of time. Observing an agent control your computer via a terminal, it's quite easy to get nerd-sniped into thinking:</p>
+            <br>
+            <blockquote class="border-l-4 border-slate-600 pl-4 my-2 text-gray-300">"Holy shit, it can control an entire computer, all functions performed by remote white-collar labor are going to be automated by this paradigm."</blockquote>
+            <br>
+            <p>When you work in a technologically privileged environment, it is easy to mistake a local success for a universal one. If my model can read company data through an MCP, inspect code changes, and write documentation into Notion, it is tempting to conclude that computer-use agents will soon automate broad swaths of white-collar work. But this inference does not travel as well as it seems. Most organizations do not have their information, tooling, and operational context wired together in forms that are cleanly accessible to language models.</p>
+            <br>
+            <blockquote class="border-l-4 border-slate-600 pl-4 my-2 text-gray-300">"Well then, let's build the data layer or connectivity layer for this poorly linked data"</blockquote>
+            <br>
+            <p>is the logical next step along this line of thinking that several of the big labs, entrepreneurs, and investors are taking. And they're not wrong. There is tremendous value over the near term in doing this if executed right with the right team. Analogously, Waymo has a pretty damn good service in San Francisco and none of the end-to-end guys have anything of this level of autonomy in production right now. They're doing just fine. However, there will be situations and scales at which the harness engineering effort v/s outcome tradeoff will be significantly tested.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">Philosophically</h2>
+            <p>Video in, computer commands out is how humans interact with computers and thereby most of the internet. Even if this is not the optimal way for agents to interact with them, if an agent is building for human consumption, it must be equipped with the ability to perceive the content it is building in the way that it is going to be absorbed downstream.</p>
+            <br>
+            <p>There are certain applications that have large market capture that just won't be able to serve the ideal harness required to cleanly interface with their tools via a CLI. There are also professions in which the spatiotemporal nature of what they're working on is critical to the task itself. Video editing, CAD, and observing robotic simulation results are all examples of tasks people perform via computers where what their eyes capture is not incidental but central. Current models, for the most part, perceive images, but not video. There are exceptions to this, such as Google DeepMind's <a href="https://developers.googleblog.com/gemini-2-5-video-understanding/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Gemini</a> family, which has native video understanding and can process hours of video content, and Alibaba's <a href="https://github.com/QwenLM/Qwen3-VL" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Qwen3-VL</a>, which introduced architectural innovations for long-video temporal modeling.</p>
+            <br>
+            <p>It is my opinion now that in order to solve the intelligence problem required to get to human-like, and subsequently superhuman, levels of computer use behavior, a model must be equipped with the ability to stream pixels in real time, or at least on demand in a way that preserves temporal structure.</p>
+            <br>
+            <p>We are already seeing work along these lines. Standard Intelligence's <a href="https://si.inc/posts/fdm1/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">FDM-1</a> trains directly on video using inverse dynamics models to label an 11-million-hour dataset of screen recordings. <a href="https://arxiv.org/abs/2510.19488" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">VideoAgentTrek</a> from the Qwen group and Google DeepMind's <a href="https://arxiv.org/abs/2510.04673" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Watch and Learn</a> both train computer-use agents from unlabeled online videos via learned inverse dynamics models, leveraging the native video understanding capabilities of their respective foundation models. Most of this work builds off of the foundations laid by OpenAI's <a href="https://arxiv.org/abs/2206.11795" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Video PreTraining (VPT)</a> from 2022, which showed that a video-native model pretrained on unlabeled Minecraft gameplay could be fine-tuned to accomplish hard tasks like diamond mining that no prior method had achieved.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">Challenges</h2>
+            <p>Like setting out to solve self-driving with a radically different learned approach, there are several factors that make this path look like it's not worth doing from the outside.</p>
+            <br>
+            <p>The first is that video is expensive: expensive to store, expensive to stream, expensive to run full self-attention over, and expensive to understand. There is a considerable amount of engineering work required to build the infrastructure needed to train performant models that work in this way, and then to serve them at low enough latencies for the spatiotemporal understanding to actually be useful. That is a real objection, not a fake one. But it is also the kind of systems objection that tends to look immovable right up until someone makes a serious dent in it. The SI team claims to have made progress on the representation problem for video by training a <a href="https://si.inc/posts/fdm1/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">highly efficient video encoder and compressor</a>. They also built their own <a href="https://si.inc/posts/the-heap/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">video storage stack</a> from the ground up in a way that made the approach economical for them. Whether or not any one team has fully solved this, it at least suggests that the cost profile is not obviously prohibitive forever.</p>
+            <br>
+            <p>The second objection is more strategic: <em>"my current agent-based harness is improving at a great rate."</em> I get it. If you are operating a company or research lab and have to justify big expensive bets like this, you might be in a situation where you have to explain to shareholders, investors, or even your own team why it is worth pushing into a harder and less immediately legible direction. If the current stack is getting better every quarter, the burden of proof on a more radical bet is high.</p>
+            <br>
+            <p>The third objection is that the data space is not yet as refined as it is for LLMs. This is fair, but it is also true of almost any new modality in which we try to train models seriously. The approaches from Qwen, Google, and SI all use internet-scale data from recordings of humans using computers, and they have built mechanisms to clean this data up, extract actions, and turn weakly structured observations into something trainable. In some cases, this involves human-labeled data for inverse dynamics models; in others it involves more automated processing pipelines. In spirit, this looks very similar to what we do in self-driving: take messy real-world behavioral data, build tooling to structure it, and use that to train models that can infer meaningful action from observation. I think the data space can grow quickly here precisely because it can borrow from both robotic learning and LLM tooling. Once you have a good foundation model for the computer use task, you have at your disposal a prior to then be able to refine by fine-tuning to excel at specific tasks &ndash; and a source for data to mine for your foundation model's flywheel. FDM-1 demonstrates this concretely: after pretraining on internet-scale video, it was fine-tuned on less than one hour of driving data to navigate turns around a block in San Francisco, and separately fine-tuned to perform multi-step CAD operations in Blender &ndash; both tasks well outside its pretraining distribution.</p>
+            <br>
+            <p>I think with two eyes, a keyboard, and a mouse, you can build a <a href="https://geohot.github.io/blog/jekyll/update/2020/08/20/a-silicon-person.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">silicon person</a>. Going back to 2020, it looks like George Hotz thought so too.</p>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-4">
+    </footer>
+</body>
+</html>

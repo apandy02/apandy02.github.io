@@ -13,55 +13,17 @@
             background-color: #000000;
             color: #ffffff;
         }
-        
-        /* Essay paragraph content - more readable */
-        div.mb-12 > p:not(.text-base):not(.text-sm) {
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 1.9;
-        }
-        
-        /* Also style paragraphs in lists within essays */
-        div.mb-12 li {
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 1.9;
-        }
-        @media (max-width: 768px) {
-            .container {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: rgba(59, 130, 246, 0.5);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        .back-to-top:hover {
-            opacity: 1;
-        }
-        
-        /* Add these new styles */
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-            position: relative;
-        }
-        
         @media (max-width: 768px) {
             .container {
                 padding-left: 16px;
                 padding-right: 16px;
                 max-width: 100vw;
             }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
         }
     </style>
     <script>
@@ -93,478 +55,84 @@
     </nav>
 
     <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
-        <p class="text-lg font-light text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p class="text-lg font-light text-center text-gray-300 mb-16 max-w-2xl mx-auto">
             A slightly structured log of miscellaneous thoughts.
         </p>
 
-        <div class="mb-16 bg-slate-800 rounded-xl p-6 max-w-lg mx-auto">
-            <ul class="space-y-2 text-center">
-                <li><a href="#questions" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Questions</a></li>
-                <li><a href="#looking-forward" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">2026</a></li>
-                <li><a href="#decade-for-century" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">A Decade for a Century</a></li>
-                <li><a href="#digital-worlds" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Digital Worlds</a></li>
-                <li><a href="#bitter-lesson" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">The (Human) Bitter Lesson</a></li>
-                <li><a href="#hindsight" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">2024</a></li>
-                <li><a href="#o1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">O1</a></li>
-            </ul>
-        </div>
-
-        <div id="questions" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">Questions</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">March 9, 2026</h3>
-            <br>
-            <p>What does a <a href="https://www.darioamodei.com/essay/machines-of-loving-grace" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">country of geniuses in a data center</a> unlock? Do the geniuses solve problems that seem intractable to the rest of us? Or are they upper bound by some fundamental limitation of human-like intelligence?</p>
-            <br>
-            <p>Is the marginal product of developing such a country of geniuses in a data center greater than anything else we could be working on? Or should we be starting new scientific projects that some of these new geniuses can contribute to?</p>
-            <br>
-            <p>There are, of course, <a href="#digital-worlds" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">physical constraints</a>. There are also regulatory and diffusion-based ones. Which friction requires the most lubrication? Which is most worth trying to ease? Which ones will resolve themselves as we ascend the ladder of intelligence?</p>
-            <br>
-            <p>How should we think about the free market when corporations own labor that is limited only by access to energy and compute? Can we avoid monopolistic scenarios? Or are we doomed to continue our descent down the slope of consolidation?</p>
-            <br>
-            <p>Will synthetic agents need their own tokens of exchange? Perhaps their own economy, separate from ours?</p>
-            <br>
-            <p>These are some of the many big questions we are confronted with at this moment. These are also some of the ones I do not feel confident in my answers to. I expect it will become progressively more imperative to answer these and more in the coming years.</p>
-        </div>
-
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
-
-        <div id="excited-2026" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">What I'm Looking Forward to in 2026</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">December 29, 2025</h3>
-            <br>
-            <p>I used to try and make predictions for what was going to happen in the coming year. I no longer try to do this for a couple of reasons. First, things have been evolving at a rapid pace, not only technologically but also economically. When incentives and developments co-evolve quickly like this, it becomes difficult to clearly envision how exactly the future rolls out. This is the smaller bit. You could also call this a skill issue; I am okay with this characterization. The second, more prominent reason is that it makes me root for or against events as they unfold. One of the last things I want to see on my timeline is someone talk about how they got a prediction for a negative event right. Perhaps worse than this is reading a post from someone celebrating advances they predicted as if they were the ones making them happen. So, instead of predicting what will happen, here's a list of areas of development I'm interested in following.</p>
-            <br>
-            <h2 class="text-lg font-bold mb-4">Action-controlled world models, and their quality/price scaling</h2>
-            <p>I recently wrote an essay on <a href="#digital-worlds" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Digital Worlds</a> and why I think they will be crucial on the path for us to deploy physical agents in constrained environments. In 2026, I'm particularly interested in scaling laws for such models with regard to both quality and price efficiency. Right now, most of these models are really large and expensive to run inference on. If we want to use them as simulators to train RL agents in, we need to be able to step through the environment really fast and inexpensively without compromising on quality (and, in fact, improving quality at lower prices).</p>
-            <br>
-            <p>If language models are any indication of how market forces (and technological development) can push for model efficiency, we are in for a treat in this space over the next couple of years. In 12 months, we went from having a model like o3 that can do really well on the ARC-AGI benchmark at an insanely expensive price point to GPT-5.2, which not only outperforms o3 on this benchmark but does so at 0.25% of the cost. If we expect to see intelligence/price improvements at even a fraction of this pace, I think we will end 2026 with models like <a href="https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">SIMA-2</a> that are increasingly trained in environments generated by world models. I think this is extremely exciting.</p>
-            <br>
-            <img src="images/gpt_o_arc_agi.png" alt="ARC-AGI performance showing dramatic improvement from o3 to GPT-5.2" class="w-full max-w-3xl mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">GPT-5.2's result on ARC-AGI-1 at a fraction of o3's cost, 1 year later. Source: <a href="https://arcprize.org/blog/oai-o3-pub-breakthrough" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">ARC Prize</a> (with gpt-5.2's result scribbled onto it by me)</p>
-            <br>
-            <p><strong>A minor aside on world modeling as a simulation technique</strong>: I've been seeing a lot of criticism on X talking about whether world-model-type simulators make any sense if the amount of data required to train them is equivalent to the amount of data required to run behavior cloning to train agents themselves. I think this is a fair question to be asking, but I still maintain my position that world models are crucial.</p>
-            <br>
-            <p>First, we have a ton of internet-scale data from embodied agents without any action information (which we can still learn to approximate, as shown in <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Genie</a>). If we can train gigantic foundation models that utilize this data, we can amortize the cost of training agents over the additional data required to generalize to their specific domain environments.</p>
-            <br>
-            <p>Second, I think this is somewhat similar to the debate about using reinforcement learning in language models: a lot of studies show that pass@k on base models can yield similar results to RL-trained models, but the key point is that RL reshapes the distribution so the model makes the right moves without needing to sample k times. Similarly, instead of needing to observe the correct "actions" X times in the real world, we can observe them a fraction of the time and use the simulator to generate additional experience that reinforces those behaviors, effectively trading expensive real-world interaction for cheaper simulated rollouts.</p>
-            <br>
-            <h2 class="text-lg font-bold mb-4">Scaling context windows</h2>
-            <p>The context window of a language model is the number of tokens (chunks of characters) a model can process at once. The GPT-3.5 model that powered the launch of ChatGPT had a context window of <a href="https://www.ibm.com/think/topics/context-window" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">4,096 tokens</a>, while newer (non-reasoning<a href="#footnote-reasoning" class="text-blue-400">*</a>) frontier models now operate at around the million-token scale. For example, OpenAI's <a href="https://openai.com/index/introducing-gpt-4-1/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">GPT-4.1</a> supports up to 1,000,000 tokens of context, and Anthropic's <a href="https://www.anthropic.com/news/claude-sonnet-4" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Claude Sonnet 4</a> also supports up to 1,000,000 tokens of context. This is a 250x increase in 3 years. To make these numbers feel less abstract, <a href="https://platform.openai.com/docs/guides/text-generation" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">OpenAI's own rule of thumb</a> is that 1 token is about 0.75 words in English, so 4,096 tokens is about 3,000 words. That is roughly a <a href="https://thereadingtub.com/how-many-words-per-chapter-in-harry-potter/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">single Harry Potter chapter</a>. 1,000,000 tokens is about 750,000 words, which is in the same ballpark as holding the <a href="https://en.wikipedia.org/wiki/Harry_Potter" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">entire series</a> in the context window at once.</p>
-            <br>
-            <p>The reason I'm excited for orders-of-magnitude increments to this is because: 1) it allows for models to have longer reasoning chains, 2) it will allow for greater multimodality, allowing for us to unify advancements across spacetime models, audio models, and language models by packing in an increasing number of diverse tokens into context, but more importantly 3) I have the intuition that in-context learning within extremely large context windows will be one of the biggest prerequisites to "continual learning"</p>
-            <br>
-            <p>Continual learning is the biggest buzz term in the LLM space since "reasoning," since it represents one of the biggest limitations that current models have: a lack of memory. Every time you open up a new ChatGPT window, it's like speaking to a new model. They have some memory features that allow the model to search through your chat history to "remember" things, but this doesn't really feel like a continuous process. My intuition for why continual learning is a function of context window size is simple: we know that <a href="https://arxiv.org/abs/2005.14165" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">in-context learning is highly data efficient</a> (several orders of magnitude more efficient than training). I.e., if I tell a model something during my chat with it, it learns to leverage that new knowledge pretty quickly and efficiently within the same chat window. This is very different from training, where thousands of examples of a concept are required to distill it within the model's parameters.</p>
-            <br>
-            <p>There are several other approaches to solving this problem, but I think the most elegant one will be the least handcrafted and complex one. An effectively unbounded context window paired with a minimal retrieval-and-compression layer feels like the cleanest path toward something continual-learning-like. We’ll still need some interim scaffolding to manage salience and scale, but longer contexts should reduce how clever that scaffolding has to be. Some folks from <a href="https://www.youtube.com/watch?v=UTuuTTnjxMQ" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Google DeepMind and Anthropic</a> seem to share this intuition with me.</p>
-            <br>
-            <h2 class="text-lg font-bold mb-4">Scaled deployment of end-to-end learned robots, and approaches to make safety cases for them</h2>
-            <p>This one is close to my heart and very relevant to the work I do. When I first came across the idea of training a self-driving agent end to end, the same way we trained an image classifier in ~2019, it seemed like one of those simple-but-elegant, no-brainer ideas that made me wonder why I hadn't thought of this myself. At the time, very few people thought this was a good idea. Those who did (George Hotz, founder of Comma, and Alex Kendall, co-founder of Wayve, where I now work) seemed to think that it was the only solution to solving the long tail.</p>
-            <br>
-            <p>What was then a contrarian idea is now seemingly the consensus long-term solution, with <a href="https://www.tesla.com/AI" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Tesla</a> rewriting their entire driving stack to an end-to-end system in 2023 and <a href="https://waymo.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Waymo</a> increasingly publishing work in this area. This design/training regime has now extended beyond self-driving to all sorts of robotics applications, with companies like <a href="https://www.physicalintelligence.company/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Physical Intelligence</a>, <a href="https://www.1x.tech/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">1X</a>, <a href="https://www.linkedin.com/company/dyna-robotics/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Dyna Robotics</a>, <a href="https://www.nvidia.com/en-us/research/robotics/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">NVIDIA</a>, and countless others putting their eggs in this basket. This is a good thing, because it is the right philosophy to solve the intelligence problem central to embodied agents.</p>
-            <br>
-            <p>However, with this come some challenges. These models are stochastic, hard-to-interpret black boxes. Therefore, validating such systems and making safety cases for them is a novel challenge that is yet to be solved. I often see this problem extended to the limit, with vocal (they're always so vocal) critics claiming it to be intractable and therefore a dead end. I don't believe this to be the case, but it is definitely one that we don't have a consensus solution for.</p>
-            <br>
-            <p>I spoke to a safety engineer a few years ago who found it hard to wrap his head around statistical analyses for safety rather than structural ones. The analogy he drew to me was, "If I was going to say that a building is safe to live in, I would like to have mechanical and structural guarantees that it was safe. I wouldn't be able to make a safety case by saying the building hasn't fallen for 100 years and therefore will not fall." I completely agree with this statement, but I do think that there is signal to be drawn from the 100 years of structural integrity.</p>
-            <br>
-            <p>I have a few ideas on how I think we build towards solving these problems, but I will keep them for the workplace. How would you solve this problem?</p>
-            <br>
-            <h2 class="text-lg font-bold mb-4">Training data mixes for embodied agents: egocentric data, teleoperated data, synthetic data, and how this plays out</h2>
-            <p>One of the most interesting and important aspects of developing learned robot agents is figuring out the data mix used to train a policy. At the beginning of 2025, there was one predominant type of data collection method: teleoperation. Robotics companies hired teleoperators to perform tasks with the robot hardware using controllers (which have taken many different forms, from PlayStation controllers to VR controllers), and then used this training data with the intention to clone this behavior via a learned robot policy. Now, close to the end of the year, a few new types of data sources have emerged. Synthetic data is data generated via the kinds of techniques discussed in all of my world-model-related rants (above in this essay, and in <a href="#digital-worlds" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">this essay</a>). Egocentric data is essentially videos of humans performing tasks that we want the robot to be able to perform. By itself, egocentric data is not very helpful, since the hardware (the human body) is quite different from robot hardware. However, we're starting to see that with clever sensor setups and intelligent selection of what parts of the training process this kind of data is used in, it can <a href="https://www.pi.website/download/human_to_robot.pdf" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">demonstrably boost model performance</a>.</p>
-            <br>
-            <img src="images/pi_human_to_robot_transfer.png" alt="Human to robot transfer emerging with diverse VLA pretraining" class="w-full max-w-4xl mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">Human-to-robot transfer as an emergent property of diverse pretraining. Source: <a href="https://www.pi.website/download/human_to_robot.pdf" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Physical Intelligence</a></p>
-            <br>
-            <p>I think all of these forms of data are extremely complementary and will be part of the recipe that produces economically valuable robot policies. I'm super excited to see how these (and potentially more!) different forms of data collection play together.</p>
-            <br>
-            <h2 class="text-lg font-bold mb-4">Packing decades into years: extrapolating from 2025</h2>
-            <p>2025 packed in a ton in 12 months. At the start of the year, the AI bubble was going to pop and <a href="https://www.bloomberg.com/news/newsletters/2025-01-27/nvidia-loses-589-billion-as-deepseek-batters-stock-evening-briefing-americas" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">US capital markets took a fall</a> after DeepSeek released and open sourced R1. After the GPT 5 release, critics declared the wall had been hit and the bubble was just about to pop. <a href="https://www.youtube.com/watch?v=lXUZvyajciY" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Andrej Karpathy</a>, <a href="https://www.youtube.com/watch?v=21EYKqUsPfg" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Rich Sutton</a>, <a href="https://www.youtube.com/watch?v=aR20FWCCjAs" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Ilya Sutskever</a>, and other legendary AI researchers came out and said that the current paradigm produces slop and that we have to look elsewhere for AGI. Later, Anthropic released Opus 4.5, OpenAI released GPT-5.2(+codex variants) and Google released Gemini 3 Pro. All of these models destroyed benchmarks, and to me Codex + Claude Code feel like really senior programming colleagues. Just a few days before the new year, Karpathy tweeted that he's "never felt this much behind as a programmer" and that "Clearly some powerful alien tool was handed around except it comes with no manual and everyone has to figure out how to hold it and operate it, while the resulting magnitude 9 earthquake is rocking the profession", very strongly contradicting his prior claim about these models producing slop.</p>
-            <br>
-            <img src="images/karpathy_programming.png" alt="Andrej Karpathy tweet about feeling behind as a programmer" class="w-full max-w-2xl mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">Karpathy's reflection on the seismic shift in programming</p>
-            <br>
-            <p>I expect every year from here on out to pack in increasing amounts of advancement and excitement. What a time to be alive!</p>
-            <br>
-            <p id="footnote-reasoning" class="text-sm text-gray-400">*I mention non-reasoning models here because we do not actually know the full length of internal reasoning chains for some frontier systems, so the effective "total" context plus hidden reasoning budget is not always clear.</p>
-        </div>
-
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
-
-        <div id="decade-for-century" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">A Decade for a Century</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">December 19, 2025</h3>
-            <br>
-            <p><a href="https://arxiv.org/abs/2303.12712" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Sparks of Artificial General Intelligence</a> were first reported when <a href="https://openai.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">OpenAI</a> released <a href="https://openai.com/research/gpt-4" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">GPT-4</a> in March 2023. 2 years and several months later, some may say we are yet to see the flames. Whether autoregressive language models are a straight shot to superintelligence or an off ramp on the journey there is a highly overplayed debate that I will abstain from engaging in. It is, however, increasingly obvious to me that the sparks we saw were symbolic of a new chapter of human pursuit.</p>
-            <br>
-            <img src="images/ylc.png" alt="Yann LeCun tweet" class="w-full max-w-xl mx-auto mb-4 mt-4">
-            <br>
-            <p>In 2023, the world woke up to the realization that 1. We have the compute and infrastructure to run ungodly parallel workloads consuming tens of gigawatts of energy, and 2. The learning algorithms we have (neural networks, and more particularly transformers), are incredible at learning low-loss representations of petabytes of data while optimizing for a generalized objective. <a href="https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">AlexNet</a> 2.0.</p>
-            <br>
-            <p>Since then, we've seen similar recipes produce captivating results in a number of unique domains. Image generation models like <a href="https://www.midjourney.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Midjourney</a>, video generation models like <a href="https://runwayml.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Runway's Gen-4.5</a>, generalist robot policies from <a href="https://www.physicalintelligence.company/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Physical Intelligence</a>, human-like self-driving models from <a href="https://www.tesla.com/AI" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Tesla</a> and <a href="https://wayve.ai/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Wayve</a>, all apply different variations of the same sets of techniques. As a consequence of this technology, the world today is very different from the world 10 years ago (despite the fact that our primate brains are great at normalizing exponentials).</p>
-            <br>
-            <p>When GPT-4 was released, a bunch of images like the following went viral.</p>
-            <br>
-            <img src="images/gpt_4_5.png" alt="GPT-4 vs GPT-5 size comparison" class="w-full max-w-2xl mx-auto mb-4 mt-4">
-            <br>
-            <p>The implication was that the jump from GPT-4 to GPT-5 would represent an increase of several orders of magnitude in the model's parameter count. While the number of parameters in the GPT-5 model is unknown to the public, I'd wager that it is roughly of the same order of magnitude as its whole number predecessor. This is not to say the models aren't an order of magnitude better. There are a number of different evaluations that demonstrate the exponential improvement of models at performing useful tasks. One that I particularly like is METR's <a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">"Measuring AI Ability to Complete Long Tasks,"</a> which benchmarks models based on how long the tasks they can autonomously complete would take human experts. The length of tasks models can coherently perform to a high degree has grown astoundingly.</p>
-            <br>
-            <img src="images/metr_eval.png" alt="METR evaluation showing exponential growth in task completion time horizon" class="w-full max-w-4xl mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">Task completion time horizons have been doubling every ~7 months. Source: <a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">METR</a></p>
-            <br>
-            <p>We haven't actually entered the next era of truly gigantic training runs yet: we don't have enough purpose-built datacenters, and even the biggest clusters we do have are bottlenecked by physical infrastructure (power, cooling, networking, energy), and software infrastructure (fault-tolerant distributed training orchestration, high-throughput data pipelines, robust checkpointing and recovery). Most of the gains above have come from squeezing more out of roughly the same hardware: better kernels and architectures (<a href="https://arxiv.org/abs/2205.14135" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">flash attention</a>, <a href="https://arxiv.org/abs/2305.13245" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">GQA</a>, <a href="https://arxiv.org/abs/2405.04434" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">MLA</a>, MoE and more), smarter training setups with synthetic data and <a href="#o1" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">reinforcement learning</a>, and a willingness to spend far more compute at inference time instead of only during model training. There's no reason we can't build a "2024-tier" model on "2020-tier" hardware in 2025 using modern recipes; you can already see this in hobby projects that replicate frontier behavior in small models on aging GPUs.</p>
-            <br>
-            <p>The floor is dropping on the cost per unit of intelligence while in the background the ceiling is rising on how much compute and capital we can throw at the problem at once. Bigger, better infrastructure doesn't just let us run single massive jobs, it lets us run many more jobs, ablations, and wild ideas in parallel. The compounding of those two trends will ensure that the exponential stays exponential and that this idea extends beyond language-driven domains like software engineering.</p>
-            <br>
-            <img src="images/intelligence_price_ratio.png" alt="Artificial Analysis Intelligence to Price Ratio showing exponential improvement" class="w-full max-w-3xl mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">Source: <a href="https://press.airstreet.com/p/the-state-of-ai-report-2025" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">State of AI Report 2025</a>, Air Street Capital</p>
-            <br>
-            <p>In the 1880s, early electric lighting felt like the whole story. Bulbs and arc lamps were a visible miracle (something the general public could see and feel the impact of themselves) and that's where attention and capital flowed. But the real revolution wasn't the bulb; it was the grid. The hard, unglamorous work of laying copper, building generators, standardizing voltages, and wiring cities turned electricity from a spectacle into infrastructure. Once the grid existed, the world reorganized itself around it: factories, cities, communication, transportation, healthcare, even human sleep cycles changed. We then built infinitely many more visible miracles with this infrastructure and a matured understanding of how we can optimally use it.</p>
-            <br>
-            <p>A century later, the same story played out again with the internet. In the 1990s, everyone thought the revolution was websites. The bubble inflated around shiny domains and digital stores like <a href="https://en.wikipedia.org/wiki/Pets.com" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">pets.com</a>. But the real transformation came later, when the boring parts matured. Servers, fiber optics, data centers, protocols, software and cloud infrastructure rewired the entire economy. The bubble popped, but the foundations it left behind built everything we use today.</p>
-            <br>
-            <p>We're in a similar place now with synthetic intelligence. There's a lot of focus on bulb development (which is fair and warranted) but not enough people removed from the frontier are thinking about the grid. The real story of the 2020s will be the world we build for our synthetic counterparts to inhabit.</p>
-            <br>
-            <p><strong>Over the next decade, we'll build the infrastructure and improve algorithmic data efficiency to lay the foundation for the next century.</strong></p>
-        </div>
-
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
-
-        <div id="digital-worlds" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">Digital Worlds</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">December 16, 2025</h3>
-            <br>
-            <p>One of the biggest bottlenecks AIs will come up against are the physical limitations of the "real" world. <a href="https://darioamodei.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Dario Amodei</a> talks about this extensively in his <a href="https://darioamodei.com/machines-of-loving-grace" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Machines of Loving Grace</a> essay: intelligence alone doesn't bend the laws of physics. Even if AI is able to think at the speed of the electrons powering it, in order to discover new things in the real world, it needs to be able to interact with it. These interactions are subject to fundamental constraints of the physical world. As a super simple illustration of this problem, think of an agent whose job is to find a cure for cancer. The scientific methods for testing whether a proposed treatment is safe and effective are time-consuming and may put participants at risk. For example, the typical <a href="https://jamanetwork.com/journals/jama/fullarticle/1835506" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">FDA approval process</a> for a new drug takes approximately 8-10 years from initial testing to approval. Similar challenges arise in robotics, where robots must interact with the physical world, particularly in safety-critical systems.</p>
-            <br>
-            <p><strong>How do we overcome this limitation?</strong></p>
-            <br>
-            <p>By building really good models of the world. If we can simulate the dynamics of the world to a precise enough degree that results in the simulator correspond to the same results in the real world (within a degree of mathematical precision), agents can propose, test, and verify a lot more solutions in the simulator, subject only to the latency and fidelity of said simulator.</p>
-            <br>
-            <p>This is not a new idea. We've built simulators pretty much since we've had computers, and they've enabled us to build great things. However, we're just about getting to the point where we have the infrastructure, domain knowledge, and general-purpose learning algorithms to build high-fidelity, data-driven simulators of the world. Taking the self-driving space as an example: roughly all simulators that were actually used to train/test driving agents were physics simulators. These simulators, much like game engines, are designed with a human model of real-world physics. For example, a specified gravitational force is applied to objects in the simulator, frictional coefficients are specified for surfaces and tires, and so on. These kinds of simulators are a classic case of <a href="https://en.wikipedia.org/wiki/Polanyi%27s_paradox" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Polanyi's paradox</a>. While we think we know and can specify all of the physics necessary to perfectly simulate a driving environment, we miss out on the subtle, tacit regularities of reality that we don't even know to write down. Lucky for us, we no longer have to rely (purely) on these kinds of simulators. Instead, we can learn models of the world from data.</p>
-            <br>
-            <p><strong>So what is a world model?</strong> A world model takes in a state of the world, and can predict what the next state of the world will be given an action; in other words, a learned transition function. Going back to the self-driving example, a world model would be a model that takes in as input the state of the scene around a car (this can be a combination of different sensory inputs: camera/imu/radar/lidar), an action, and then outputs what the next state of the scene around the car would be. A great example of this is <a href="https://wayve.ai/press/wayve-launches-gaia3/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Wayve's GAIA-3</a>. This model takes as input video, is conditioned on an action, and produces future frames of the video.</p>
-            <br>
-            <p>There's been a huge interest in building video world models, and the commercial viability of generative media has made it easy to justify the investment. But the end game here is not content generation; that's just the visible surface of something deeper. These models learn internal representations of how the world behaves, and that latent world knowledge is exactly what robotics wants. As our feeds are flooded with sloppy <a href="https://openai.com/sora" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Sora</a> and <a href="https://deepmind.google/technologies/veo/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Veo</a>-generated video and our parents' generations suffer defeat at the hands of the misinformation monster, the labs pumping out this content will be trying to transfer the internal world models learned by these generative models to generate high-fidelity robot training grounds. It's no surprise that <a href="https://deepmind.google/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Google DeepMind</a> built <a href="https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">SIMA 2</a>, an agent that can play, reason, and learn inside virtual 3D worlds, and trained it within <a href="https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Genie</a>-generated environments. SIMA 2 can self-improve through trial-and-error entirely without human feedback, paving the way for agents that learn and grow with minimal human intervention. More recently, DeepMind demonstrated <a href="https://arxiv.org/abs/2512.10675" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">using Veo as a world simulator</a> to evaluate Gemini Robotics policies, validating predictions against 1600+ real-world trials.</p>
-            <br>
-            <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" class="block w-full max-w-3xl mx-auto mb-2 mt-4" target="_blank">
-                <img src="https://img.youtube.com/vi/PDKhUknuQDg/maxresdefault.jpg" alt="Genie 3: A large-scale foundation world model" class="w-full rounded-lg hover:opacity-80 transition-opacity duration-200">
+        <div class="max-w-2xl mx-auto space-y-6">
+            <a href="essays/video-computer-use-agents.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">The Case for Video Native Computer Use Agents</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Mar 2026</span>
+                </div>
             </a>
-            <p class="text-base text-gray-400 text-center mb-4">Genie 3: A large-scale foundation world model. <a href="https://www.youtube.com/watch?v=PDKhUknuQDg" class="text-blue-400 hover:text-blue-300 transition-colors duration-200" target="_blank">Watch on YouTube</a></p>
-            <br>
-            <p>While action-conditioned visual world models are an extremely promising line of work, <strong>the physics of the world isn't purely visual.</strong> In the real world, we feel objects, experience contact forces, and many of these physical concepts aren't purely visually observable. I recently read an interesting paper from ETH Zurich, <a href="https://arxiv.org/abs/2501.10100" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Robotic World Model,</a> that trained a robot in a learned world model where the model predicts the robot's physical state (joint angles, velocity, torque, and so on) as well as privileged information like contact forces. We have proof that these kinds of models work in a model-based reinforcement learning setting, and we're developing really good visual/sensory world models. I'm super interested in lines of research that combine these two concepts to build more holistic world models for physical AI agents to be trained in.</p>
-            <br>
-            <p><strong>So does this mean everything will be trained inside learned world models?</strong></p>
-            <br>
-            <p>Not necessarily. Learned models shine in data-rich, visually grounded settings; hand-crafted simulators shine where the mechanisms are known but the data isn't. The key is finding the right balance between them to bootstrap progress. Traditional simulators are what got us to the dance: <a href="https://waymo.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Waymo</a>, <a href="https://getcruise.com/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Cruise</a>, and other self-driving companies built compelling systems using physics-based simulators. <a href="https://www.aboutamazon.com/news/tag/robotics" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Amazon Robotics</a> deployed over 750,000 robots that were heavily tested in hand-crafted environments, with analysts estimating their advanced robotics technology could generate <a href="https://www.benzinga.com/25/02/43461425/amazons-advanced-robotics-could-save-10b-annually-by-2030-predicts-morgan-stanley/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">annual cost savings exceeding $10 billion by 2030</a>. But as these systems operate in the real world, they generate exactly the kind of observation data that learned world models need. Hand-crafted simulators give us safe places to get started; learned models let us capture the long tail of reality that we could never specify by hand. You use one to bootstrap the other. We need to build digital worlds for different processes: biological, neurological, physical, chemical. Some will be carefully designed from first principles, some will be learned from data, and increasingly, they'll be hybrids. But as data constraints ease and learning algorithms grow more efficient, the balance will shift: neural simulation will become dominant. These are the training and testing grounds for agents before they act in our world.</p>
-        </div>
 
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
+            <hr class="border-t border-white opacity-10">
 
-        <div id="bitter-lesson" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">The (Human) Bitter Lesson</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">March 19, 2025</h3>
-            <br>
-            <p>Rich Sutton, artificial intelligence legend and co-founder of the field of reinforcement learning (and newly one-half of a <a href="https://awards.acm.org/about/2024-turing" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Turing Award</a>), wrote an essay titled <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">The Bitter Lesson</a> where he expresses that the bitter lesson he's learned to swallow over his career in AI is that "general methods that leverage computation are ultimately the most effective, and by a large margin."</p>
-            <br>
-            <p>The implication of the bitter lesson is simple: whether it's via <a href="https://en.wikipedia.org/wiki/Moore%27s_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Moore's law</a> or <a href="https://en.wikipedia.org/wiki/Huang%27s_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Huang's law</a> (the specifics don't really matter since an exponential can be interpreted as infinitely many overlapping sigmoids), we're consistently advancing the amount of computational power available, and the best techniques to build artificial intelligence will be those that can improve proportionately with an increase in computational resources.</p>
-            <br>
-            <p>Therefore, what we want are algorithms that are compute-hungry and for which we can establish <a href="https://en.wikipedia.org/wiki/Neural_scaling_law" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">laws of scaling</a>. We've learned that some techniques scale better when provided with a lot of data, a lot of time, and a lot of FLOPs. I want to point out here that this bitter lesson extends beyond our synthetic successors to our organic peers as well.</p>
-            <br>
-            <p>Let's start by considering improvement in sports. You can generally break down most sports into a combination of endurance, strength, speed, and technique/skill. Oftentimes, athletes treat these as discrete properties, but there are indeed relationships between them that allow for optimal scaling. We can think of skill, and more specifically an athlete's technique, as the algorithm, and the sum of their endurance, strength, and speed (there are other factors too, such as balance, flexibility, resilience, but let's keep it concise for now) as the compute equivalent in this system. The best athletes in the world are those whose technique allows for their performance to improve consistently with improvements in their attributes (compute). For example, a professional athlete who plays a sport like tennis or squash that involves explosive movements and constant changes in direction will reach a point of diminishing returns if their technique involves wasted movement and excessive strain or friction on their joints. Someone nimble on their toes can sustain a higher computational gain than someone who is flat-footed and makes aggressive contact with the ground.</p>
-            <br>
-            <p>The difference between the human body and computer chips is that the scaling of the former is much more bounded than that of the latter. There is some theoretical limit (based on the athlete's genetics, diet, etc.) to how much output they can produce, although we should probably consider this an area of weakness as a species (athletes today are better than athletes from a hundred years ago, but our rate of improvement is measly compared to computers). Instead of focusing solely on humans' inherent athletic ability, we can focus on an individual's output. That is, we might not be able to improve FLOPs, but we most certainly can improve the total FLOP budget by spending more time in the gym and focusing on recovery.</p>
-            <br>
-            <p>All of the comparisons drawn above can be mirrored with the mind as well. We might not be able to improve our mental capacity significantly (again, we really should be figuring out how to), but we can improve our total compute budget by doing more things, staying consistent, and growing our output while adapting to methods that promote compute-optimal learning (spending one hour building something from scratch may be more valuable than spending ten hours reading about how to build that thing). We also want to avoid things like burnout and keep the learning process stimulating.</p>
-            <br>
-            <p>We're bitter-lesson learners as well, but our ability to scale our compute budget is limited. How can we lift this burden? We can make small advances by improving lifestyle choices, but that won't get us close to the rate of improvement of our silicon successors. What kinds of biological and neurological advances will allow us to keep up with scale? What techniques should we employ for the tasks we fulfill? After all, we want to build synthetic intelligence to help us live better lives, not so that we can rest our burdens on their backs.</p>
-        </div>
+            <a href="essays/questions.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">Questions</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Mar 2026</span>
+                </div>
+            </a>
 
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
-    
-        <div id="hindsight" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">2024 in hindsight</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">December 27, 2024</h3>
-            <br>
-            <p>Unless you occasionally choose to operate at a significant proportion of the speed of light, the way you experience each year of your adult life should feel temporally alike. Despite this fundamental constraint, many claim that the rate at which you experience life "speeds up" after a certain age. Some claim that this has to do with a reduced frequency of novel events, while other work argues it has something to do with neurodegeneration and a reduced efficiency in visual perception. In supporting either one of those points of view, I would be well out of my depth.            </p>
-            <br>
-            <p>Regardless of the cause (or existence) of such phenomena, I thought it might be a good idea to write out a fresh recounting of the year I just experienced before my brain undoubtedly starts its process of confabulation. </p>
-            <br>
-            <h2 class="text-2xl font-semibold mb-4">Career</h2>
-            <p>I started the year continuing to grow in my role at Motional, where I learned and built some interesting things. I received invaluable guidance on how to go from writing scrappy code with copious technical debt creation to being able to design reliable (reasonably) large scale systems that generate slightly less debt. I used this guidance to  architect and implement a multi-stage ML system that aimed to automate the operational/engineering processes of detecting and diagnosing failures across the autonomous vehicle fleet. Building something that processed tremendous amounts of multimodal data was a great learning experience.</p>
-            <br>
-            <p>On a related note, I was invited to be a reviewer at the ACM SIGCHI Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI) this year. This was a novel experience that I really enjoyed and learned a lot from - particularly about the current state of research in automotive human-machine interaction.</p>
-            <br>
-            <p>Eventually, my time at Motional was cut short due to <a href="https://techcrunch.com/2024/05/14/motional-cut-about-550-employees-around-40-in-recent-restructuring-sources-say/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">restructuring</a> at the company. Nonetheless, I'm grateful for what I learned there and the people I got to work with. Shortly after this, I started a new role at Intersystems Corporation in Cambridge, MA.</p>
-            <br>
-            <h2 class="text-2xl font-semibold mb-4">Programming</h2>
-            <p>I spent a good amount of my "free time" building independent projects this year. With some of these, the focus was the process. I built things with the objective to learn the skills necessary to build them. Others were built with the intent to produce real value. I've listed some of these from each category below.            </p>
-            <br>
-            <h3 class="text-xl font-semibold mb-4">Educational</h3>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li><a href="https://github.com/apandy02/transformers" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Character-level GPT</a>
-                    <ul class="list-disc pl-5 mt-2">
-                        <li>I trained an autoregressive decoder only model on all the Harry Potter books and got it to generate somewhat context-coherent text. I built the transformer and all of its components "from scratch" in PyTorch.</li>
-                    </ul>
-                </li>
-                <li><a href="https://github.com/apandy02/vision" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Diffusers</a>
-                    <ul class="list-disc pl-5 mt-2">
-                        <li>I revisited Computer Vision as a topic, with the goal of being able to build a diffusion model from scratch (thanks to a lot of help from Jeremy Howard and Fast AI)</li>
-                        <li>In notebooks, I experimented first with smaller things (resnets for classification), extracted components from this code into a small "from scratch" (in PyTorch) vision library and worked my way up to implementing Denoising Diffusion Probabilistic (and Implicit) Models</li>
-                    </ul>
-                </li>
-                <li> Vision applications
-                    <ul class="list-disc pl-5 mt-2">
-                        <li>I had experience building real-world deployed ML (albeit classical) applications, and I had now gained some new vision skills. To put these together, I built a few different things. Of note:</li>
-                        <li>I built a <a href="https://github.com/apandy02/livedetection" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">real time detection streaming application</a> that would detect faces in frames of a live stream and present them to a client. With this one, I learned about WebRTC and improved my understanding of asynchronous systems.</li>
-                        <li>I also built a <a href="https://github.com/apandy02/video_processing_ml_service" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">post-processing cloud service</a> that would take in video data (for example, video logs from a real world robot) and identify features from frames of the video. With this one I developed some architecture/infrastructure skills. I worked with Kubernetes and a suite of AWS services (EKS, Lambda, SQS message queues)</li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-            <img src="images/github_contribs.png" alt="GitHub Contributions 2023 vs 2024" class="w-3/4 mx-auto mb-2 mt-4">
-            <p class="text-base text-gray-400 text-center mb-4">GitHub contributions in 2024 compared to 2023. I'm aware this isn't an ideal metric to optimize for, but I'm happy there was an increase in output.</p>
-            <br>
-            <h3 class="text-xl font-semibold mb-4">Larger, more intentional projects</h3>
-            <p>I am yet to "ship" any of the projects in this category, but these were developed (or are being developed) with the intention of producing real value. I'm going to follow up with more detailed Essays individually describing these projects, but for the sake of documenting everything of significance I did this year in one place, I built:</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>An educational companion for early educational support. Think tamagotchi in a 3D world, but powered with a speech to speech AI pipeline, and designed to help its user learn better. I have a lot to say about the utility, expressiveness, and design of this product, but I'll do so in a standalone article. In order to build this (along with a couple of friends) I taught myself some Unity, C#, and game design for this.</li>
-                <li>An automated nutritionist/sports scientist. I built myself an application that centralizes all of my already digitized data (from my whoop, smart scale, etc), allows for LLM-based nutrition logging in natural language, and most importantly: provides me with science backed feedback on a daily, weekly, and monthly timescale. I built this using <a href="https://docs.ell.so" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">ell</a> and <a href="https://fastht.ml" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">FastHTML</a>, both of which were released this year. I look forward to sharing more about this one soon.</li>
-            </ul>
-            <br>
-            <p>In addition to working on my own projects, I finally started contributing to a few open source projects this year (better late than never). I hope that this becomes a larger part of my life moving forward.            </p>
-            <br>
-            <h2 class="text-2xl font-semibold mb-4">Books</h2>
-            <p>I managed to read a number of books that had been collecting dust in my bookshelf for a while. I won't list all of them here (you can see my <a href="/bookshelf.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">bookshelf</a>), instead I wanted to capture a series of snippets (quotes, interpretations) that I would not like to lose. Below is a list of a few of these             </p>
-            <br>
-            <p class="text-lg font-semibold mb-2">The Idea Factory (John Gertner) and The Computer and The Brain (John Von Neumann)</p>
-            <p>It's possible for a small contingency of the most brilliant people of a period to see the future. If you brought the average person (including the average scientist/engineer) who lived in the 1940s to 2024 and exposed them to a high fidelity augmented reality device or told them about the wonders of AI we've created, it quite possibly would lead to an anxiety attack. However, if you could bring John Von Neumann or Claude Shannon to the present, it would probably feel "just right" to them. They'd then probably find their bearings and shortly make their way to research labs where they'd immediately start contributing to the state of the art. How many Shannons and Von Neumann's do we have in the world today?</p>
-            <br>
-            <p class="text-lg font-semibold">The Bhagavad Gita</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li><em>You have the right to work, but for the work's sake only. You have no right to the fruits of work. Desire for the fruits of work must never be your motive in working. Never give way to laziness, either.</em></li>
-                <li><em>Work done with anxiety about results is far inferior to work done without such anxiety, in the calm of self-surrender.</em></li>
-            </ul>
-            <br>
-            <p class="text-lg font-semibold mb-2">Hackers and Painters (Paul Graham)</p>
-            <p>Programming is more akin to an art than science. This is not to say there aren't fundamental aspects of programming that are deeply rooted in science, as a matter of fact a lot of the work I'm interested in is scientific. But outside of finding optimal solutions to constrained problems, the process of building a magical product is more artistic than it is scientific.</p>
-            <br>
-            <h2 class="text-2xl font-semibold mb-4">General Lessons</h2>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300 mb-6">
-                <li>When an opportunity presents itself, dedicate some time to understand your own biases and presumptions before assessing it. Then, give more time and thought than you originally anticipated.                 </li>
-                <li>It's good to run a mental tree search on futures based on the outcomes of decisions you can make. Just be aware that certain branches might stimulate your mind more than others. Make sure you don't give these branches any extra attention because the actual process of simulating futures can take away from your ability to act in the present.</li>
-                <li>We're animals of inertia. It takes considerable force to overcome this inertia. Find states of inertia that lead you to require minimal variance and then live in these states.</li>
-                <li>If you really love what you do, do more of it. Then, do some more.</li>
-                <li>Understand your internal reward model. You might want to apply a discount factor to actions based on the horizon of the rewards they lead to.</li>
-            </ul>
-            <h2 class="text-2xl font-semibold mb-4">What I look forward to doing next year</h2>
-            <p>I'd like 2025 to be a year where I continue to develop along the same axes with greater compounding effects. Specifically, I'd like to be able to ship a few different paid products of my own and take some leaps entrepreneurially. I also want to continue to build things to learn things. A non-exhaustive list of things I'd like to learn more about are:</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>GPU programming</li>
-                <li>LLM Reasoners</li>
-                <li>Interpretability</li>
-                <li>Diffusion models for multiple modalities</li>
-                <li>More efficient systems design and maintenance</li>
-            </ul>
-            <br>
-            <p class="mb-6">It is my hope that this essay elicits higher accountability from me. When I write the 2025 version of this, it should feel like I continued growing along these axes at an increased rate. If this is not the case, I have not done myself justice.</p>
-        </div>
+            <hr class="border-t border-white opacity-10">
 
-        <!-- Article divider -->
-        <hr class="border-t border-white opacity-20 my-12 max-w-4xl mx-auto">
+            <a href="essays/looking-forward-2026.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">What I'm Looking Forward to in 2026</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Dec 2025</span>
+                </div>
+            </a>
 
-        <div id="o1" class="mb-12">
-            <h3 class="text-3xl font-normal mb-4 text-white">An O1 Inspired Survey: Modeling Chain of Thought Generation as a Reinforcement Learning Problem</h3>
-            <h3 class="text-xl font-normal mb-4 text-slate-400">October 14, 2024</h3>
-            <br>
-            <p>In game-playing AI systems, pure neural networks perform considerably worse than versions of themself augmented with search. For example, AlphaZero <a href="#citation-1" style="color: #87CEEB;">[<span style="color: #87CEEB;">1</span>]</a> showed that the network without Monte-Carlo Tree Search (MCTS) was able to achieve a chess ELO rating of 2500. This is high, but not by any means superhuman. In contrast, the complete system with MCTS appended to the base model is able to achieve an ELO rating of 3500 which is ~600 points higher than the highest rating achieved by a human (<a href="https://en.wikipedia.org/wiki/Comparison_of_top_chess_players_throughout_history" style="color: #87CEEB;">Magnus Carlson</a>).</p>
-            <br>
-            <p>During training and at test time, MCTS is able to search through potential futures, evaluate the outcomes of making different decisions, and select ones that maximize expected reward. In addition to test-time search, AlphaZero is trained with self-play, a Reinforcement Learning technique that enables the system to simulate games by playing against previous versions of itself (if interested, see my implementation of AlphaZero <a href="https://github.com/aryamanpandya99/alphazero_nano" style="color: #87CEEB;">here</a>). This synthetically generated experience reduces the dependency of the system on human generated training data and encourages deeper exploration of the solution space. This deep exploration can lead to the discovery of novel solutions in situations that are rarely encountered (see <a href="https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/" style="color: #87CEEB;">move 37, AlphaGo v/s Lee Sedol</a>).</p>
-            <br>
-            <p>Similarly, embedding search-based mechanisms within the larger system should help large transformer-based language models produce better answers to hard, reasoning dependent problems. Hypothetically, these methods would enable the same kind of evaluation of future outcomes, allowing models to carefully answer questions while assessing the vast solutions pace.</p>
-            <br>
-            <p>Recently, OpenAI introduced their "reasoning model", O1 <a href="#citation-2" style="color: #87CEEB;">[<span style="color: #87CEEB;">2</span>]</a>. O1 is said to have been trained using reinforcement learning and to "think" before answering questions. According to benchmark results reported by OpenAI, O1 indicates a step-function improvement to the capabilities of language models at solving difficult problems in domains like math, science and computer programming. Further, the publicly released O1-preview and O1-mini displayed significant improvements on the LMSY Chatbot Arena leaderboard, a crowdsourced platform that evaluates the performance of Large Language Models (LLMs) based on human preferences, thus proving its versatility in multiple domains. </p>
-            <br>
-            <p>As we've come to expect, OpenAI withheld information about the training process they use as well as their datasets. They go as far as to protect the chains of thought generated by models in response to prompts. Therefore, what we can know about O1 is limited to the information they released in their blog posts, system card, and speculation from the community based on existing literature.</p>
-            <br>
-            <p>I thought it would be a good exercise for me to review surrounding literature to try and interpret what OpenAI might be doing here, and that's what this "article" is going to be about.</p>
-            <br>
-            <p>The success of O1 comes as the culmination of success of three intuitions:</p>
-            <br>
-            <ol class="list-decimal pl-5 mt-4 space-y-2 text-gray-300">
-                <li>Scaling the amount of compute available to the model at inference time leads to better answers to difficult questions</li>
-                <li>Chain of thought prompting elicits reasoning in large language models <a href="#citation-3" style="color: #87CEEB;">[<span style="color: #87CEEB;">3</span>]</a>, and can be viewed as a policy improvement operator <a href="#citation-4" style="color: #87CEEB;">[<span style="color: #87CEEB;">4</span>]</a></li>
-                <li>We can use reinforcement learning in conjunction with large reward models to build out a self-training process</li>
-            </ol>
-            <br>
-            <p>In early 2022, OpenAI released Wei et al. 2022 <a href="#citation-3" style="color: #87CEEB;">[<span style="color: #87CEEB;">3</span>]</a>. This paper demonstrated that including few-shot examples of chains of thought within prompts to the model can significantly increase the accuracy of its outputs. Mechanistically, we know that "the model gathers answer tokens from the generated context, the question context, as well as the few-shot context" <a href="#citation-5" style="color: #87CEEB;">[<span style="color: #87CEEB;">5</span>]</a>. Few-shot CoT prompting has since been used as a reliable means of producing consistently higher quality outputs from language models across many domains. It is now standard practice to include samples that use CoT in datasets used to pre-train and fine-tune models.</p>
-            <br>
-            <p>While the description above would make it seem like this paper was the basis mainly for the first half of the second intuition listed above, I would argue that it fueled exploration along all of the other lines in that list. In this paper, the authors briefly mention that "additional compute can be allocated to more complex problems." While stated in passing (whether intentionally or not) this is a key insight we'll go into further detail on later on.</p>
-            <br>
-            <p>Shortly after the release of this paper, Zelikman et. al. released "STaR: Bootstrapping Reasoning with Reasoning" <a href="#citation-8" style="color: #87CEEB;">[<span style="color: #87CEEB;">8</span>]</a>. This paper introduces the STaR (Self-taught Reasoner) fine-tuning process that combines CoT prompting with outcome supervision to produce an iteratively improving model. STaR has a generally simple training process:</p>
-            <br>
-            <ol class="list-decimal pl-5 mt-4 text-gray-300">
-                <li>Using few shot CoT, produce responses from an LLM given a set of prompts</li>
-                <li>Using automation, check for correctness of the outputs</li>
-                <li>Append correct solutions (including the CoT that led to them) to a dataset that can be used to fine tune the model</li>
-                <li>In situations where the answers are incorrect, prompt the LLM the correct answer and have it reverse engineer a CoT that would have led to this output</li>
-                <li>Include these in the dataset used for finetuning</li>
-                <li>Iterate</li>
-            </ol>
-            <img src="images/star.png" alt="STaR Algorithm" class="w-3/4 mx-auto mb-2 mt-2">
-            <p class="text-base text-gray-400 text-center">The formal STaR algorithm from the paper</p>
-            <br>
-            <p>This method builds on the results from the OpenAI paper that CoT improves model outputs, and builds a process that allows for the model to iteratively teach itself to develop better chains of thought. This led to significant improvements over the benchmark results of the base model. For
-                example, on the Commonsense Question Answering (CQA) dataset, the base model (GPT-J) achieved an accuracy of 20.5%, a direct finetune on the entire CQA training set achieved a 60% accuracy, STaR without the rationalizing step achieved a 68.8% accuracy, and STaR with the rationalizing step achieved 72.5% accuracy.
-                It's noteworthy, that the base model was trained on 0% of the CQA dataset, the direct finetune used 100% of the training dataset, star without rationalization used 86.7% of the training dataset, and STaR with rationalization used 86.7% of the training dataset.</p>
-            <br>
-            <p>This paper also briefly formulates this training objective as an approximation to the RL policy gradient objective. It doesn't, however, use this insight to guide the training process, or dive deeper into a mathematical analysis of this approximation. </p>
-            <br>
-            <p>STaR builds the intuition that more inference time computation can lead to better results, and also defines a self-play like training procedure. That being said, there were a few obvious shortcomings of this method:             </p>
-            <br>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>As long as the final answer is correct, a sample is included in the iteratively generated fine-tuning dataset. This will include outputs where flawed CoT's mistakenly yielded correct answers.
-                </li>
-                <li>The authors try to avoid wasting data by generating reverse engineered CoTs, but these could produce an exaggerated version of the problem in bullet 1. There's no means in the methodology of this paper to verify that the forced CoTs contain coherent reasoning. </li>
-                <li>This paper ignores the learning benefit that could come from samples where the model fails entirely (true negatives).</li>
-            </ul>
-            <br>
-            <p>The first two limitations mentioned are due to the fact that this method uses outcome-based supervision instead of process-based supervision. In outcome-based supervision, we only judge the correctness of the output of the model. In process-based supervision, we judge the correctness of each step in a CoT.            </p>
-            <br>
-            <p>With these considerations in mind, in Lightman et al. 2023 <a href="#citation-6" style="color: #87CEEB;">[<span style="color: #87CEEB;">6</span>]</a>, researchers from OpenAI train a Process-supervised Reward Model (PRM) by fine-tuning a base model. The PRM is trained on the outputs of a "generator" language model where each step of the CoT is labeled for correctness. </p>
-            <br>
-            <p>In this work, the authors focus solely on training a PRM, and not on fine-tuning the generator model that the PRM is judging. They do, however, state that "fine-tuning with RL is a natural next step." (maybe there's some foreshadowing here) </p>
-            <br>
-            <p>Before kicking off the PRM training process, they fine-tune the generator to ensure that it produces CoTs in a consistent, line delimited format. They kick off the training with an initial batch in the following way:</p>
-            <br>
-            <ol class="list-decimal pl-5 mt-4 text-gray-300">
-                <li>Collect generator outputs</li>
-                <li>Get human-annotation on these outputs</li>
-                <li>Train the PRM by fine-tuning a base model on this human annotation</li>
-            </ol>
-            <br>
-            <p>Then, they begin the iterative training procedure:</p>
+            <hr class="border-t border-white opacity-10">
 
-            <ol class="list-decimal pl-5 mt-4 text-gray-300">
-                <li>Collect generator outputs</li>
-                <li>Determine the "most convincing wrong answers" using the latest version of the PRM. These are answers that are determined to be wrong, but contained CoTs that were able to trick the PRM.</li>
-                <li>Surface the "most convincing wrong answers" to human annotators for labeling</li>
-                <li>Include this newly labeled data in the training set</li>
-                <li>Re-train the PRM on this data</li>
-                <li>Repeat steps 1-5 iteratively until some level of convergence</li>
-            </ol>
-            <br>
-            <p>An important detail to note is that the PRM also evaluates the final answer and treats it like any other step in the CoT.</p>
+            <a href="essays/decade-for-century.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">A Decade for a Century</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Dec 2025</span>
+                </div>
+            </a>
 
-            <p>As part of their evaluation procedure, the authors develop an ORM (Outcome-supervised Reward Model) in addition to the PRM to compare performance. They find that while both methods outperform the base model with few-shot CoT and majority voting, the PRM considerably outperforms the ORM on (78.2% accuracy v/s 72.4% accuracy). This is insightful — the coherence of the CoT is important in leading it to a correct answer. It further underlines the idea that a purely outcome based model (like STaR) have areas for improvement, and encourages further work to train verifiers for the process, not just the outcome. In my opinion, there's a strong possibility that this training procedure, and RL based generator improvements are two of the fundamental building blocks of O1.</p>
-            <br>
-            <p>The authors of the STaR paper subsequently released Zelikman et al. 2024 <a href="#citation-9" style="color: #87CEEB;">[<span style="color: #87CEEB;">9</span>]</a> detailing the "Quiet-STaR" algorithm. This paper acknowledges and builds off of the following shortcomings of STaR identified by the authors:</p>
+            <hr class="border-t border-white opacity-10">
 
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>They trained and evaluated STaR on very narrow domains and only on question-answer type samples.</li>
-                <li>Training on labeled samples of CoT is expensive and also off-policy (the samples are not generated by the same model that is being trained).</li>
-            </ul>
-            <br>
-            <p>To address these shortcomings, instead of training only on question-answer samples and basing the objective on the outcome, they formulate a non-myopic auto-regressive objective. What this means is that they supervise their training procedure on the semantic correctness of the next N tokens predicted based on a rationale. They train the model on a more vast corpus of text, specifically OpenWebMath and Colossal Clean Crawled Corpus (C4).</p>
-            <br>
-            <img src="images/quiet_star.png" alt="Quiet-STaR Parallel Generation" class="w-1/2 mx-auto mb-2 mt-2">
-            <p class="text-base text-gray-400 text-center">Parallel generation process in Quiet-STaR algorithm</p>
-            <br>
-            <p>The Quiet-STaR paper takes the idea of scaling inference-time compute further than the previously discussed algorithms. At each token in the input sequence, the model generates multiple rationales of length T to aid in the prediction of the next tokens in the sequence. This process obviously creates orders of magnitude of increased computational complexity which the authors reduce by generating these tokens in parallel for n tokens in the input sequence using an efficiently cached attention mask. helps visualize this process, and the open source code <insert link> details how this was implemented.</p>
-            <br>
-            <p>The objective of the training procedure is the sum of two separate loss functions. The first of these is the negative log likelihood loss of the predicted next-N tokens. The second of these is a formulation of the REINFORCE loss function. In order to construct the REINFORCE loss, they define the reward function as the difference between <span class="math inline">\(p^{talk}\)</span> and <span class="math inline">\(p^{-talk}\)</span> where <span class="math inline">\(p^{talk}\)</span> is the selected rationale's output distribution and <span class="math inline">\(p^{-talk}\)</span> is the average across rationales for that token. </p>
-            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-            <br>
-            <p>
-                This reward function mentioned above is represented by the following equation:
-            </p>
-            <br>
-            <img src="images/qstarreward.png" alt="Quiet-STaR Reward Function" class="w-3/4 mx-auto mb-2 mt-2">
-            <p class="text-base text-gray-400 text-center mb-4">Reward function used in the Quiet-STaR algorithm</p>
-            <p>This training procedure leads to improvements in the quality of outputs, with some notable improvements against the baseline being 8.1% v/s 5.9% on the GSM8K dataset, and 42.6% v/s 36.3% on the CQA dataset.</p>
-            <br>
-            <p>While these numbers are measurable improvements, they are far less impressive when normalizing this improvement by the increased computational complexity. This procedure also raises a few questions surrounding its practicality, a few of which were raised by the authors in the paper:</p>
-            <br>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>The authors note that the thought tokens (and therefore added inference time compute) helped with certain types of text, but with other domains led to no measurable improvements. This makes us question whether the added expenditure on test-time compute is worth it.</li>
-                <li>They note that even within the same text, not all tokens benefit from having thought tokens leading up to them. This may lead to a waste of compute and realistically would be impractical to deploy in any production system</li>
-            </ul>
-            <br>
-            <p>It's unlikely O1 is doing something like this on every single token, but I thought the formulation of the reinforce loss was an interesting way of incorporating RL and was worth noting.</p>
-            <br>
-            <p>Several other papers propose approaches along the lines of STaR. For example, Hosseini et al. 2024 <a href="#citation-10" style="color: #87CEEB;">[<span style="color: #87CEEB;">10</span>]</a> trains a verifier during the STaR training process to learn from wrong answers too. Instead of creating reverse engineered CoTs in the case of wrong answers, they use both the wrong and correct solutions to train a verifier using Direct Preference Optimization (DPO). At inference time, this verifier is used as a judge to select an answer from K proposals. </p>
-            <br>
-            <p>Most of the methods discussed so far are Verifier-based techniques to scale test-time compute. Ie, they use an auxiliary model that is trained to verify proposals sampled from a generator model. In August 2024, Google posted Snell et al. 2024 <a href="#citation-11" style="color: #87CEEB;">[<span style="color: #87CEEB;">11</span>]</a> that examines a number of verifier and non-verifier based methods of test-time compute scaling. Interestingly, they designed an experiment to study the effectiveness of different methods to scale test-time compute given a constant compute budget. This was a recent publication and details many different methods, so I won't go into too much detail on any one of them, but I will highlight a few things that stood out to me when I read through it.            </p>
-            <br>
-            <p>On a high level:</p>
-            <ul class="list-disc pl-5 mt-4 space-y-2 text-gray-300">
-                <li>The benefits of scaling methods vary across different types of problems.</li>
-                <li>Scaling inference time compute helps more on more difficult problems as long as the base LLM contains the knowledge required to come up with an answer. The most challenging types of questions still benefit from additional pre-training data/compute. This result is loosely illustrated in the figure below.</li>
-            </ul>
-            <br>
-            <img src="images/difficulty.png" alt="Relationship between problem difficulty and scaling methods" class="w-3/4 mx-auto mb-2 mt-2">
-            <p class="text-base text-gray-400 text-center mb-4">Effectiveness of scaling methods across problem difficulty levels</p>
-            <br>
-            <p>Instead of using human annotation to train a PRM (like PRM800k), based on Wang et al. <a href="#citation-7" style="color: #87CEEB;">[<span style="color: #87CEEB;">7</span>]</a> they train and supervise one using estimates of per-step correctness obtained from running Monte Carlo rollouts from each step in the solution.</p>
-            <br>
-            <p>Below, I briefly describe the different methods they examined, and the results they each obtain.</p>
-            <h3 class="text-xl font-semibold mt-4 mb-2">Verifier-based methods</h3>
-            <img src="images/prm_search.png" alt="PRM Search Methods Comparison" class="w-3/4 mx-auto mb-4 mt-6">
-            <p class="text-base text-gray-400 text-center mb-2">Different PRM-based search methods</p>
-            <br>
-            <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-300">
-                <li><strong>Beam search:</strong> explores multiple paths simultaneously, keeping the top K most promising candidates at each step and stepping from them at the next. It balances exploration and exploitation by maintaining a diverse set of high-scoring partial solutions. It performs better than all other verifier based methods on harder problems. You can think of beam search as lookahead search with K = 0 (this will make sense in one moment).</li>
-                <li><strong>Lookahead search:</strong> extends beam search by performing rollouts of varying depths (K) to evaluate the potential of each candidate with the PRM scoring the final step of the rollout. It allows for deeper exploration of promising paths. This is more like the MCTS rollouts in AlphaZero, with the only difference being that the PRM is frozen here. This method blows up computationally, and there's a limit to how much they could scale in these experiments. It doesn't seem to outperform other methods as much as you'd think (at least based on these experiments).</li>
-                <li><strong>Best of N weighted:</strong> This approach generates multiple solutions and groups them based on their final answers. The scores of solutions leading to the same correct answer are summed, and the answer with the highest total score is selected. This one's surprisingly good, and it keeps scaling well. Instead of a traditional best of N where we pick the highest rated final answer, they group together all solutions that lead to the same final answer, even if the steps or reasoning are different. Instead of just picking the single highest-scoring solution, they add up all the individual scores for the steps leading to each right answer. The final answer with the highest total score wins.</li>
-                <li><strong>Majority voting:</strong> multiple solutions are generated, and the most common final answer is selected as the output. Performance hits a wall as the budget grows.</li>
-            </ul>
-            <br>
-            <img src="images/verifier_results.png" alt="Verifier-based methods performance on MATH dataset" class="w-1/2 mx-auto mb-4 mt-4">
-            <p class="text-base text-gray-400 text-center mb-2">Performance of verifier-based methods on MATH dataset vs. inference compute budget</p>
-            <br>
-            <h3 class="text-xl font-semibold mt-4 mb-2">Refining Proposal Distribution</h3>
-            <p>Using the principle of self-revision, this approach allows language models to correct mistakes made in previous reasoning traces. They follow the training procedure from Qu et al. 2024 <a href="#citation-12" style="color: #87CEEB;">[<span style="color: #87CEEB;">12</span>]</a>. The main idea is that they formulate the training process as a multi-turn Markov Decision Process where at each turn the LLM can generate new tokens as well as edit tokens generated at previous steps. They divide compute to both sequential and parallel sampling to try and benefit from the local properties of sequential generation and the global properties of parallel sampling. This procedure is considerably different than the others discussed here, so I'll leave it for another time to explore its nuances. They find that on the MATH dataset this procedure can out-perform the search based methods at high compute budgets.</p>
-            <br>
-            <h3 class="text-xl font-semibold mt-4 mb-2">General comments:</h3>
-            <p>It sort of feels like everyone, regardless of what specific approach they propose, believe in the three intuitions stated initially. Specifically, my takeaways are that inference-time compute scaling unlocks the ability for the model to interpolate better and training procedures for inference scaled models will have some sort of RL flavor to them. If these scaling laws stand the test of time, this would have broad implications across the stack. Inference compute will be more valuable than it previously was: it's typically easier to run model inference on a wide variety of GPUs (not just the top of the line NViDIA ones) which might (slightly) shake up the competitiveness of chip manufacturers. From a research perspective, resources will be split between methods to better scale pertaining and methods to better scale inference compute- even though the latter aims to scale test-time compute, experimentation and fine-tuning that leads to these types of systems will require training compute.</p>
-            <br>
-            <p>If there's one thing that the recent history of deep learning has taught me is that on largely general tasks, more simply crafted objectives produce astonishingly good solutions. I would expect that a similar scenario might play out with scaling inference time compute.</p>
-            <br>
-            <h3 class="text-xl font-semibold mt-4 mb-2">Bibliography</h3>
-            <ol class="list-decimal pl-5 mt-4 space-y-2 text-gray-300">
-                <li id="citation-1">Silver, David, et al. "A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play." Science 362.6419 (2018): 1140-1144.</li>
-                <li id="citation-2">OpenAI. "O1 System Card." OpenAI, 12 Sept. 2024, openai.com/system-cards/o1.</li>
-                <li id="citation-3">Wei, Jason, et al. "Chain-of-thought prompting elicits reasoning in large language models." Advances in neural information processing systems 35 (2022): 24824-24837.</li>
-                <li id="citation-4">Zhang, Hugh, and David C. Parkes. "Chain-of-thought reasoning is a policy improvement operator." arXiv preprint arXiv:2309.08589 (2023).</li>
-                <li id="citation-5">Dutta, Subhabrata, et al. "How to think step-by-step: A mechanistic understanding of chain-of-thought reasoning." arXiv preprint arXiv:2402.18312 (2024).</li>
-                <li id="citation-6">Lightman, Hunter, et al. "Let's verify step by step." arXiv preprint arXiv:2305.20050 (2023).</li>
-                <li id="citation-7">Wang, P., et al. "Math-shepherd: Verify and reinforce llms step-by-step without human annotations." arXiv preprint arXiv:2308.13785 (2023).</li>
-                <li id="citation-8">Zelikman, Eric, et al. "Star: Bootstrapping reasoning with reasoning." Advances in Neural Information Processing Systems 35 (2022): 15476-15488.</li>
-                <li id="citation-9">Zelikman, Eric, et al. "Quiet-star: Language models can teach themselves to think before speaking." arXiv preprint arXiv:2403.09629 (2024).</li>
-                <li id="citation-10">Hosseini, Arian, et al. "V-star: Training verifiers for self-taught reasoners." arXiv preprint arXiv:2402.06457 (2024).</li>   
-                <li id="citation-11">Snell, Charlie, et al. "Scaling llm test-time compute optimally can be more effective than scaling model parameters." arXiv preprint arXiv:2408.03314 (2024).</li>
-                <li id="citation-12">Qu, Yuxiao, et al. "Recursive introspection: Teaching language model agents how to self-improve." arXiv preprint arXiv:2407.18219 (2024).</li>
-            </ol>
+            <a href="essays/digital-worlds.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">Digital Worlds</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Dec 2025</span>
+                </div>
+            </a>
+
+            <hr class="border-t border-white opacity-10">
+
+            <a href="essays/bitter-lesson.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">The (Human) Bitter Lesson</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Mar 2025</span>
+                </div>
+            </a>
+
+            <hr class="border-t border-white opacity-10">
+
+            <a href="essays/hindsight-2024.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">2024 in hindsight</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Dec 2024</span>
+                </div>
+            </a>
+
+            <hr class="border-t border-white opacity-10">
+
+            <a href="essays/o1-survey.html" class="block group">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-xl font-light text-white group-hover:text-blue-400 transition-colors duration-200">O1: Modeling CoT Generation as an RL Problem</h3>
+                    <span class="text-sm text-slate-500 font-light ml-4 shrink-0">Oct 2024</span>
+                </div>
+            </a>
         </div>
     </div>
 
     <footer class="bg-gray-900 py-4">
     </footer>
-
-    <button id="backToTop" class="back-to-top">Back to top</button>
-
-    <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-    </script>
 </body>
 </html>

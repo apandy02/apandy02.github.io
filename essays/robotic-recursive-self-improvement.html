@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - Towards Robotic Recursive Self-Improvement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar border border-white/10 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">Towards Robotic Recursive Self-Improvement</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">June 26, 2026</h3>
+            <br>
+            <p>There is a lot of discourse right now around recursive self-improvement, and almost all of it lives in the realm of bits. The image is a model that writes a better training run, which trains a better model, which writes an even better one, and so on up some dizzying curve. It is a compelling story and I think there is real substance to it. But it is also a story that quietly assumes the entire loop can be closed inside a datacenter, and I don't think that's true. At some point the loop has to touch the physical world: someone has to fabricate the chips, generate the power, mine the materials, and bolt the racks together. The part of recursive self-improvement that runs through atoms rather than bits is wildly underexplored relative to how important it is, and that physical loop is exactly what robotics is starting to close.</p>
+            <br>
+            <p>I want to be careful with the phrase "recursive self-improvement" because it arrives pre-loaded. In the way it usually gets deployed by the doom-inclined, it conjures a system bootstrapping itself toward something we can't control and probably wouldn't like. I mean something narrower and, I think, more grounded: technology that can increasingly participate in designing and building its own successors, across both planning and execution, without any of the ominous teleology. Not an intelligence explosion. Just the oldest pattern in the history of technology, running with progressively less human involvement at each turn of the crank.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">Tools building tools</h2>
+            <p>The pattern itself is ancient. We have always used tools to make better tools, and used the better tools to make the next generation after that. You can trace it through almost anything: the machine tools of the industrial revolution were used to manufacture more precise machine tools, which in turn produced still more precise ones. The recursion is not new. What is new &mdash; what separates ordinary tool-bootstrapping from what I'd actually call recursive <em>self</em>-improvement &mdash; is the rising order of autonomy in the systems doing the work. The interesting variable is not "are tools building tools" (they always have been) but "how much of the planning and judgment, not just the muscle, is the system itself contributing." As you slide up the autonomy spectrum, the human moves from operating the tool, to supervising it, to specifying a goal and stepping back.</p>
+            <br>
+            <p>I'll define a robot, for the purposes of this essay, as something that can sense the state of the physical world and take actions in it to achieve a goal. This is not a consensus definition and I don't intend to defend it too hard; it's just the one I'm running with. What separates one generation of robots from its predecessors, under this framing, is the ability to plan actions at higher levels of abstraction and to achieve more complex goals under more complexity. A robot that needs every motion scripted is a very different object from one you can hand an outcome and trust to figure out the motions, even though both "sense and act."</p>
+            <br>
+            <p>This is also where the physical and cognitive stories converge. If models can train better models, then robots can have better brains &mdash; the cognitive recursion is an input to the physical one. I'm fairly convinced we're heading toward something like a single general architecture underlying most of this (you can disagree about whether transformers already got us there), with variants of the same general intelligence doing wildly different things and steadily getting better at all of them. In the limit, "cognitive recursive self-improvement" and "robotic recursive self-improvement" are the same process viewed from two angles. But the process is the point. We are living through the physical half of it right now, and it deserves more attention than it gets.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">Why embodiment is not optional</h2>
+            <p>Here is the part I find genuinely strange about how the discourse is framed. We talk about AI improving itself as though the whole supply chain it depends on were already abstracted away into an API call. It is not. Today's models cannot meaningfully self-improve in the physical world. They cannot design and tape out a new chip and then go fabricate it, mine and discover new materials, run wet-lab experiments end to end, or stand up new sources of energy. Cognitive AI can help with pieces of this &mdash; optimizing datacenter operations, formulating physics problems, proposing experiments &mdash; but help is not the same as doing. To actually <em>do</em> things in the world, you need a physical form factor that can go out and act.</p>
+            <br>
+            <p>And once you grant the body, the embodied version has advantages its organic counterparts simply don't. A robot can be sent places we can't go, survive temperatures, pressures, and oxygen levels that would kill us, and physically assemble the next version of itself out of hardware. The recursion doesn't have to run through a single bottleneck either; it threads through every stage of a deeply complex supply chain &mdash; raw material extraction, fabrication, energy generation, infrastructure construction &mdash; at each of which embodiment unlocks a step that pure cognition cannot reach. The physical world is not a detail to be handled later. It is most of the loop.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">The flywheel problem</h2>
+            <p>The honest difficulty is that none of this is free, and the impact you can generate is bounded by the capability of the current generation of technology. My overall view is that robotics needs to become ubiquitous for the broad impact to materialize, but shifts in techno-economic paradigms take time, and you can't will a paradigm into existence by describing how good it will eventually be. Any autonomous system needs a way to kickstart the flywheel &mdash; a use case that generates real economic value with <em>today's</em> hardware, that also acts as a catalyst for the technology's own growth, and that can rapidly evolve to absorb each new capability gain as it lands. Get all three and the loop spins up on its own. Miss one and you have a demo.</p>
+            <br>
+            <p>The relationship between the automotive industry and robotics feels, to me, like the analog of software engineering's relationship with language models &mdash; and for structurally similar reasons. It's a neat place to start generating value.</p>
+            <br>
+            <p>The first reason is the users. Software engineers were already comfortable adopting new software, so dropping coding models into their workflow met a population primed to use it. Automotive engineers are the equivalent for the physical world: people already fluent in working alongside machines and robots, who don't need to be convinced that automation belongs on the floor.</p>
+            <br>
+            <p>The second is the test grounds. Software engineering came with clean, controlled environments &mdash; IDEs, CI, version control &mdash; where you could train and evaluate agents against legible signals. Automotive has factory floors: controlled, instrumented, repeatable environments where a robot's performance can actually be measured and improved.</p>
+            <br>
+            <p>The third, and the one most relevant to recursion, is that the tool can directly build the product. I can use a model to train a model. I can use a robot to build more precise actuators and controllers &mdash; the very components that make the next robot better. The output of the process feeds back into the process. That's the property you want if you're trying to close a self-improvement loop, and automotive has it natively.</p>
+            <br>
+            <p>It's worth noting how thoroughly the histories already rhyme. Automotive has been central to robotics from the start &mdash; a complex manufacturing process that has benefited enormously from automation, running from the earliest assembly-line experiments through to Tesla today. And the design and manufacturing principles transfer remarkably well: actuators, batteries, even the "brains" share deep commonalities with autonomous-vehicle stacks. It is not an accident that nearly every serious humanoid effort has an automotive partner attached &mdash; Figure with BMW, Tesla with Optimus, Boston Dynamics with Hyundai. The supply chain for the robots is often the same supply chain as the thing they're being built to help make.</p>
+            <br>
+            <p>Semiconductors are the other half of this story, and arguably the original instance of the loop. Computers and semiconductors kickstarted the first real levels of machine autonomy; then robots built using semiconductors were turned around and used to build semiconductors and electronics. The early Japanese SCARA arms going into electronics assembly are a clean example of the recursion biting its own tail. Networking later let these systems talk to each other and coordinate, laying the seeds for genuinely automated factories. Software kept improving through the 21st century, capabilities expanded &mdash; and this is still very much in progress, something we're working through right now rather than a finished chapter.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">The numbers, and the place doing it fastest</h2>
+            <p>The diffusion is real and measurable. The International Federation of Robotics reported that the global stock of industrial robots hit a record of about 2.7 million units in 2019, an increase of roughly 85% over five years. That number has only accelerated since; by 2024 the operational stock had reached around 4.66 million units. Somewhere in there, the world quietly crossed into the era of "lights-out" factories &mdash; facilities that can run without human presence &mdash; which have existed in various forms since the early 2000s. And the leading edge keeps creeping toward the recursive case directly: Apptronik's Apollo humanoid, through its partnership with the manufacturing firm Jabil, is being piloted on assembly lines that are intended to eventually include the production of more Apollos. I don't hold strong views on the broader humanoid debate, but a robot helping to build copies of itself is exactly the kind of thing I expect to see more and more of as capabilities advance.</p>
+            <br>
+            <p>If you want to see where the envelope is being pushed hardest, look at China. It installed many times more industrial robots than the United States in recent years &mdash; by 2024 the gap was roughly nine new factory robots in China for every one in the U.S. &mdash; making it by far the world's largest robot market. This is happening against a backdrop of a declining workforce and looming demographic contraction, which reframes the whole effort: for China this is closer to a survival strategy than an efficiency play, which is exactly why I'd expect it to keep pushing the frontier. There are more humanoid robot companies clustered in Shenzhen than anywhere else on earth, and there's a reason for that concentration. The country that started as a source of cheap, high-volume, disciplined labor has turned into the home of the most sophisticated automated factories in the world, and the ambition is not to build impressive demos &mdash; there's active government incentive to push the technology into production. They are, fairly literally, trying to build people to build more things.</p>
+            <br>
+            <h2 class="text-2xl font-semibold mb-4">The shape of the surge</h2>
+            <p>Carlota Perez has a framing I keep returning to: development doesn't happen smoothly, it happens in great surges of five or six decades each, in which a technological revolution and its paradigm propagate across the entire economy. The process starts small &mdash; confined to a few sectors and regions &mdash; and ends up restructuring production, distribution, communication, and consumption, diffusing outward from a core toward further and further peripheries, gated all the while by the reach of the transport and communications infrastructure underneath it. Robotics, viewed this way, is not a product category. It's a paradigm mid-diffusion, and we are early enough that the boring infrastructural questions &mdash; how the loop closes through fabs, materials, energy, and floors &mdash; matter far more than the headline demos.</p>
+            <br>
+            <p>Take the fabs as the concrete case, because they show both the promise and the constraint. Semiconductor fabs are already heavily automated, partly because humans are a contamination risk, and the precision required is brutal: robots handling lightweight, compact materials in a fab need sensors, vision, and drive systems accurate down to the sub-millimeter. But the <em>autonomy</em> of those machines has stayed deliberately low, bounded by the unforgiving failure tolerances of the process. The robots are highly task-specific, and the next frontier is incremental generality &mdash; autonomous mobile robots ferrying wafer boxes between machines in legacy fabs where overhead transport can't be installed, autonomous inspection, taking dangerous chemical-handling tasks off human hands. The honest engineering assessment, from people inside these fabs, is that the hard part is dexterity: the fine, dexterous end-effector work, the degrees of freedom in the hand, putting an O-ring into a tool or driving a screw, remains a genuine bottleneck even as dynamic motion has improved. The recursion is real but it is gated, and watching where the gate moves is the whole game.</p>
+            <br>
+            <p>I find the design layer especially interesting here, because it's where the cognitive and physical loops are starting to fuse. A lot of robotic design work happens in CAD and tools like Blender, and the spatiotemporal nature of that work makes it a natural fit for video-native computer-use agents &mdash; models that perceive the thing they're manipulating the way a human designer would. An agent that can design a better actuator in software, hand it to a robot that can fabricate it more precisely, and feed the result back into the next design pass, is the same loop again, just operating one level up.</p>
+            <br>
+            <p>None of this requires believing in an intelligence explosion, and that's rather the point. It only requires noticing that the oldest pattern in technology &mdash; tools making better tools &mdash; is acquiring autonomy, that the autonomy is rising fastest exactly where it can already pay for itself, and that the cognitive and physical halves of the loop are starting to feed each other directly.</p>
+            <br>
+            <p><strong>The recursion was always physical. We are just now building the bodies that let it run.</strong></p>
+        </div>
+    </div>
+
+    <footer class="py-4">
+    </footer>
+</body>
+</html>

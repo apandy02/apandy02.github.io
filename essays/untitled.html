@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - untitled</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar border border-white/10 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">untitled</h3>
+            <h3 class="text-xl font-normal mb-4 text-slate-400">October 11, 2026</h3>
+            <br>
+            <p>I’ve found myself going back and forth on this for a few years now, and I think it is fair to say that, as of the time of my writing this, the human species has succeeded at developing generalized machine intelligence.</p>
+            <br>
+            <p>In some ways, it’s possible that the solution to this conquest has existed for longer than we realize. You could credibly posit that general intelligence is a property not of any individual agent, but of the algorithm that produces them. In the case of current machine intelligence, this would be the learning algorithm.</p>
+            <br>
+            <p>General intelligence is an annoying term to me. How general? Are humans general intelligences? What about ones that can’t perform certain types of cognitive tasks at all, but can still exhibit nuanced sensorimotor control? What about the inverse?</p>
+            <br>
+            <p>I think it is also fair to say that human intelligence is jagged. Certain people are preconditioned to be better at certain things, creating a gap that their contemporaries fail to close despite spending more time and energy in pursuit of doing so.</p>
+            <br>
+            <p>Imagine a squash player whose reflexes and coordination let them return shots that someone with years more practice still struggles to reach. Or a chess player who intuitively spots promising continuations that another has to laboriously calculate—the sort of ability that makes watching Magnus Carlsen so striking. Neither necessarily has the same advantage in composing music or solving abstract mathematical problems. Practice shapes these abilities, but it does not give everyone the same starting point or the same rate of improvement.</p>
+            <br>
+            <p>If you take a step back, you’ll notice that the overall distribution of all these different flavors of intelligence, no matter your classification boundaries for them, is produced by the same underlying process. In humans, evolution specifies the machinery and learning dynamics that produce individual minds; experience then shapes each particular instance. The analogue in machine intelligence may therefore be less the trained model itself and more the learning algorithm—and the broader optimization process—that can repeatedly produce capable, differently specialized intelligences.</p>
+            <br>
+            <p>So what does the fact that we have such an algorithm mean?</p>
+            <br>
+            <p>In the short term, one can think of it as a universal gun that can be aimed at different competencies and used to gun them down increasingly quickly. Yes, there are differences across different realms of information, and the nuances of data collection, problem formulation, and the optimization loop across domains with different horizons make the process non-trivial and add friction to mastery. But after each mastery is gained, the subsequent one becomes faster to achieve.</p>
+            <br>
+            <p class="text-slate-400 italic">...in progress</p>
+        </div>
+    </div>
+
+    <footer class="py-4">
+    </footer>
+</body>
+</html>

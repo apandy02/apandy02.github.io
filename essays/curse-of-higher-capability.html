@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <meta name="description" content="As models become more capable, measuring what they can do increasingly requires bets on task specifications, compute budgets, and real-world risk.">
+    <meta property="og:site_name" content="Aryaman Pandya">
+    <meta property="og:title" content="The Curse of Higher Capability">
+    <meta property="og:description" content="As models become more capable, measuring what they can do increasingly requires bets on task specifications, compute budgets, and real-world risk.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://apandy02.github.io/essays/curse-of-higher-capability.html">
+    <title>AP - The Curse of Higher Capability</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar border border-white/10 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block" aria-label="Back to essays">&larr;</a>
+
+        <div class="essay-content">
+            <h2 class="text-3xl font-normal mb-4 text-white">The Curse of Higher Capability</h2>
+            <div class="text-xl font-light mb-6 text-gray-300">(or, Why Evals Increasingly Require Leaps of Faith)</div>
+            <time datetime="2026-11-01" class="block text-xl font-normal mb-4 text-slate-400">November 1, 2026</time>
+            <br>
+            <p>As models become more capable, our ability to predict their capabilities with statistical confidence can diminish pretty rapidly. It gets harder to specify a diverse enough set of tasks, and often even harder to specify tasks for which we have very clear expectations. The <a href="https://metr.org/notes/2026-01-22-time-horizon-limitations/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">METR time horizon benchmark</a> is one example of this. Measuring agents’ ability to complete tasks with longer time horizons requires longer tasks, and those are expensive to build and to baseline against human experts, so the task suite gets thin at exactly the frontier we care most about, and the confidence intervals widen accordingly.</p>
+            <br>
+            <p>But I suspect there's at least one other such dilemma in estimating model capabilities: the tasks most worth evaluating are increasingly the ones that are too risky to attempt. I believe this will lead to a massive capability overhang over the next few years of AI progress, caused not by the limits of the models but by people being unwilling to accept the financial, reputational, and operational risk involved in trying to do things as agentically as possible.</p>
+            <br>
+            <p>As model task horizons increase, simulating representative tasks gets harder, since such tasks are sparse and often involve a great deal of risk and investment. A task like "solve self-driving" can have a human (organizational) task length of decades, along with billions of dollars of invested capital and physical resources. There's no cheap, simulated version of a problem like that. And if we can't simulate these tasks, the only way to find out whether a model can do them is to actually attempt them, which means accepting real risk. Until someone is willing to make that bet, the capability goes unmeasured and unused.</p>
+            <br>
+            <p>For a while, I performed a particular task using a combination of agents, human visual inspection, and a ton of other heuristics. As models became increasingly capable, I would re-test them against this task and measure a steady rise in performance. It wasn't until GPT-6 Astra was released, and I had a conversation with a colleague about their experience with the model, that I decided to alter the task specification, making it more open-ended and removing some of the requirements I had been specifying to give the model some inductive bias. What I learned was that GPT-6 Astra could one-shot the task at a level of performance significantly higher than with my older test setup. Improvements in its multimodal and agentic capabilities had compounded, and the task demanded both.</p>
+            <br>
+            <p>Getting there involved two gambles. The first was a specification gamble: telling the model to "just do this" and giving up the structure I had built around it. The second was a cost gamble: telling it to "try harder." The run cost a lot more in compute than previous approaches, but once we factored in engineer and human reviewer opportunity cost, we probably received a significant boost in performance for a modest overall cost. Until I made both bets, my measurements were understating what the model could do.</p>
+            <br>
+            <p>I've since built a new, more open-ended benchmark from this task and run it against cheaper new models like Sol and Terra to map out the Pareto frontier of cost and performance. I've also found other tasks with a similar skill profile that agents can now automate for me. In other words, one pocket of overhang was identified, and solutions are now being built to close it, at least until the next one is discovered. I believe the specification of benchmarks like this will need to keep evolving, with some deliberate rolls of the dice built in, if we want an honest sense of how models actually perform.</p>
+            <br>
+            <p>If an overhang like this exists within a single engineer's workflow, it's presumably far larger for problems where the bet is measured in years, billions of dollars, lives, and reputations rather than a compute bill. As the stakes of what these models can do rise, it will become increasingly difficult to estimate their capabilities, because the tasks on which we'd want to evaluate them carry so much risk. A lot of this experimentation can be subsidized if model labs' businesses flourish, but it will suffer to some extent if they don't. Either way, finding out what these models can really do will increasingly take a moment of "fuck it."</p>
+        </div>
+    </div>
+
+    <footer class="py-4">
+    </footer>
+</body>
+</html>

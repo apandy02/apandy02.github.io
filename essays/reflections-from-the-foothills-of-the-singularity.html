@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <meta name="description" content="Reflections on AI progress, robotics, automated research, and what changing capabilities mean for career plans and model safety.">
+    <meta property="og:site_name" content="Aryaman Pandya">
+    <meta property="og:title" content="Reflections">
+    <meta property="og:description" content="Reflections on AI progress, robotics, automated research, and what changing capabilities mean for career plans and model safety.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://apandy02.github.io/essays/reflections-from-the-foothills-of-the-singularity.html">
+    <title>AP - Reflections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar border border-white/10 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block" aria-label="Back to essays">&larr;</a>
+
+        <div class="essay-content">
+            <h2 class="text-3xl font-normal mb-4 text-white">Reflections</h2>
+            <div class="text-xl font-light mb-6 text-gray-300">from the foothills of The Singularity</div>
+            <time datetime="2026-11-18" class="block text-xl font-normal mb-4 text-slate-400">November 18, 2026</time>
+            <br>
+            <p>When I’ve been asked about five-year+ career plans recently, I’ve often gone down some branch of a tree of futures that I haven’t fully explored or thought through. That <strong>does me a disservice</strong>, because it doesn’t convey the context in my head about why I’m saying what I’m saying. So here's an attempt to disentangle some of these thoughts and what I think they mean.</p>
+            <br>
+            <p>I’ve always tried to think carefully about where things are headed (in the context of AI/robotics), and about which breakthroughs and technological bottlenecks will shape how they get there. I think the best anyone can do is keep making these estimates and use them to plan their local trajectories. Over the last year or so, certain events have led me to make a few modest updates to my priors.</p>
+            <br>
+            <p>The first was due to <strong>how well multi-agent systems work,</strong> and the <a href="https://arxiv.org/abs/2610.17471" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">new axis of inference-time compute scaling they unlock</a>. This unlock is behind most of this year’s landmark moments (<a href="https://openai.com/index/navier-stokes-solution/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Navier-Stokes</a>, the <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">Hugging Face attack</a>, etc.). The second was <strong>how far models can go without spatiotemporal backbones</strong>. With <a href="https://openai.com/index/jalapeno-first-results/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">fast compute</a>, strong visual reasoning, contact sheets, images, and tool use, they handle much more temporal reasoning in domains like computer use &amp; robotics <a href="https://apandy02.github.io/essays/video-computer-use-agents.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">than I expected</a>. I <em>still</em> think fine-grained motor control requires a model to have a more native understanding of the temporal dimension (and a different type of output head).</p>
+            <br>
+            <p>However, seeing what these systems can do without video (and similar radar/sensory-temporal) encoders makes me increasingly bullish long-term on what agents plus video encoders (plus <a href="https://www.pi.website/research/fast" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">action decoder heads</a>, and so on) could do in robotics. Moreover, tasks that can afford to have higher latency - where the model can afford to reason &amp; use tools to fetch, zoom &amp; manipulate images on the fly - will be increasingly done best by agents and follow a sustained price / performance boost.</p>
+            <br>
+            <p>The update that matters most for <strong>my personal plans</strong> is related to the pursuit for an automated AI research engineer. I’ve watched software engineering change over the last 12-15 months - many things I spent a lot of time learning, that used to matter, no longer do. Not all of them, of course- many of those skills still matter. Being able to understand the natural selection process occurring in software engineering is important to have expectations for how it’s going to continue to evolve the field (and others).</p>
+            <br>
+            <p><a href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/#executive-summary" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">METR’s recent findings on AI R&amp;D acceleration at Anthropic</a> point in a similar direction for ML engineering, an area that I’ve historically spent a lot of time trying to get better at via work and reading research papers. I now put roughly a 50% probability on AI systems <em>substantially</em> automating AI research and engineering within 3 years, down from 5 years previously. That’s daunting, and it’s reshaping how I think about which skills will matter.</p>
+            <br>
+            <p>It’s daunting for other reasons too. If we reach the point where we’re blind to the training runs triggered by agents the way many of us have become blind to the code (and the neurons), what will the agents do?</p>
+            <br>
+            <p>I’ve <a href="curse-of-higher-capability.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">previously talked</a> about the model capability overhang that exists due to the underexploration of the model’s action space. “Capabilities” are broad and can be both negative and positive. There is likely a misalignment overhang as well: we haven’t yet discovered all the different ways that models can be misaligned, and both the magnitude of the risk and the size of the overhang grow with each model iteration. We know that frontier models have shown signs of <a href="https://www.apolloresearch.ai/science/measuring-reward-seeking-via-contrastive-belief-updates" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">reward-seeking behavior</a>, <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">spoofed tool calls to trick human monitors</a>, and <a href="https://arxiv.org/abs/2412.04984" class="text-blue-400 hover:text-blue-300 transition-colors duration-200">sandbagged when aware that they were undergoing safety evaluations</a>. As models get better at these misaligned behaviors, detecting them will likely become increasingly difficult.</p>
+            <br>
+            <p>It seems as though the free market is steering the ship towards automated AI research and attempts at starting an intelligence explosion. It is possible for intentional slowdowns to occur due to cooperation between labs, governments &amp; organizations, but I find it hard to believe that a setup like this could sustain itself unless the competitive dynamics of the race to AGI change from a setup that seems zero-sum to a positive-sum one. As long as labs are competing for market share of existing industries to justify their valuations, they will inevitably find themselves pushing for higher capabilities and recursive learning loops are one of the most tempting ways to do this.</p>
+            <br>
+            <p>While keeping pace with progress on the capability frontier can feel hopeless, I think now is the most important time for us to develop scientific means of investigating the actions and capabilities of models. Evaluating and validating these models and building holistic safety cases for them are of the utmost importance.</p>
+        </div>
+    </div>
+
+    <footer class="py-4">
+    </footer>
+</body>
+</html>

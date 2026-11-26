@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='Helvetica'>AP</text></svg>">
+    <title>AP - Pondering the Evolution of Frontier Model Capabilities in Physical Domains</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        div.essay-content > p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        div.essay-content li {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 16px;
+                padding-right: 16px;
+                max-width: 100vw;
+            }
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <header class="text-center py-2">
+        <h1 class="text-4xl font-normal mt-12 mb-4 text-white">Aryaman Pandya</h1>
+    </header>
+
+    <nav class="navbar border border-white/10 text-white max-w-fit mx-auto rounded-xl mt-4 px-4 sm:px-12">
+        <div class="flex flex-wrap justify-center">
+            <a href="../index.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">About</a>
+            <a href="../publications.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Publications</a>
+            <a href="../essays.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Essays</a>
+            <a href="../bookshelf.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Bookshelf</a>
+            <a href="../quotes.html" class="btn btn-ghost text-[14px] sm:text-[17px] normal-case font-light py-1 px-2 sm:px-4">Quotes</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-8 mt-6 mb-8">
+        <a href="../essays.html" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-light mb-8 inline-block">&larr;</a>
+
+        <div class="essay-content">
+            <h3 class="text-3xl font-normal mb-4 text-white">Pondering the Evolution of Frontier Model Capabilities in Physical Domains</h3>
+            <div class="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
+                <time datetime="2026-11-26" class="text-xl font-normal text-slate-400">November 26, 2026</time>
+                <span class="rounded-full border border-slate-700 px-2 py-0.5 text-xs text-slate-300">half-baked thought</span>
+            </div>
+            <br>
+            <p>Robotics seems to be moving up the frontier labs' list of priorities. Google showed Gemini 4 Argon <a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/" class="text-blue-400 hover:underline">getting a Spot robot to throw away a soda can</a>. It built a simulation of the pedal bin to practice opening it, then stepped on the real pedal and dropped the can in. Anthropic and OpenAI now report how their models do on physical tasks in simulation, from <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" class="text-blue-400 hover:underline">controlling a pair of robot arms</a> to <a href="https://deploymentsafety.openai.com/gpt-6-2-astra-sol/model-safety-training-and-evaluation" class="text-blue-400 hover:underline">operating lab instruments</a>. In <a href="https://robocurve.org/all-runs/" class="text-blue-400 hover:underline">Robocurve's real-world trials</a>, GPT-6.2 Astra running through Codex capped a pen in 12 of 20 tries, a task none of the specialized robot models completed.</p>
+            <br>
+            <blockquote class="border-l-4 border-slate-600 pl-4 my-2 text-gray-300">Question: Will the curriculum for generalized robotics capabilities look as analogous to human curricula as it did for language models in fields like mathematics?</blockquote>
+            <br>
+            <p>When I say curriculum here, I'm not talking about a training dataset that's structured a certain way for any one model. I mean that over the past few years, when you zoom out, the capabilities of frontier models in certain fields have evolved along a path that looks somewhat like the one humans take. For example, LLMs started out unable to do simple arithmetic, then struggled through grade school math, then university problems, and are now solving PhD-level, long-horizon math problems.</p>
+            <br>
+            <p>I'm not arguing that the rates are the same. We went from math capabilities on par with a toddler's to those of some of the smartest humans on earth in a very short span of time, roughly 10x faster than even the smartest humans (2-3 years of AI progress vs. 20-30 years of study for professionals). The analogy also breaks down in various ways, given how jagged these models are and how unevenly capable they are across subskills in math, coding and other domains. But broadly speaking, they climbed a capability ladder that resembled a human learning curve, just faster.</p>
+            <br>
+            <p>I'm not sure it will be the same for robotics. Partly because we're standing on the shoulders of the cognitive piece: frontier models already have human-expert-level reasoning and high-level task planning. And partly because robot hardware is already capable of superhuman feats on many physical tasks. Robots can lift more than us, travel faster and perform more precise manipulation. Compare that to an athlete. From the day they're born to the day they turn professional, their cognitive and physical abilities co-evolve, so that their grown mind is able to control their grown, near-superhuman body.</p>
+            <br>
+            <p>The ladder in fields like math and coding wasn't just an artifact of how we measured things either. Even with some oracle held-out eval for millennium prize problems, models a few years ago wouldn't have gotten anywhere since the algorithms, data, etc. just weren't there, and retroactive evals bear that out. My guess is the ladder exists because skills build on each other: arithmetic before algebra before proofs, and both humans and models have to respect that dependency structure.</p>
+            <br>
+            <p>With robotics the mind and the body are both already somewhat "grown", what's primitive is the friction between them: the firmware, the action space, the sensor space, how the intelligence actually gets piped into the embodiment. In some sense it feels less like a kid growing up and more like the process someone who is very physically capable and very book smart would have to go through if they completely lost their sensorimotor control and had to learn it all over again.</p>
+            <br>
+            <p>Unlike humans, though, there isn't one body to grow into. Some robots are humanoids that roughly resemble us, but many are vastly different: arms bolted to a table, quadrupeds, cars, drones, each with its own action and sensor space, so there's no single human curriculum they could even copy.</p>
+            <br>
+            <p>One possibility is that the curriculum ends up running in the opposite direction to a human one. Humans go from sensorimotor to symbolic: grasp, walk, talk, reason. Robots with frontier models attached might go the other way, from symbolic down to sensorimotor: calling high level skills like <code>pick(cup)</code>, then waypoints and end-effector poses, then closed-loop visuomotor control, and maybe last, fast contact-rich tactile control.</p>
+            <br>
+            <p>Each step down seems to lose more of the internet-scale priors the model can lean on. Vision transfers pretty well, while proprioception and touch don't have much to borrow from. If that holds, you might expect capabilities to show up roughly in order of how much they can borrow from the cognitive model, with slow, quasi-static, vision-heavy tasks first and dynamic contact-rich ones later, which would be orthogonal to how a kid learns.</p>
+        </div>
+    </div>
+
+    <footer class="py-4">
+    </footer>
+</body>
+</html>
